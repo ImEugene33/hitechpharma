@@ -4146,16 +4146,16 @@ body .mdc-ripple-surface:hover:before {
   }
 }
 .article--pagination .article--pagination-text {
-  font-style: {{ fonts_type_body_style }};
-  font-weight: {{ fonts_type_body_weight_bolder }};
+  font-style: {{ fonts_type_body_style | default: 'normal' }};
+  font-weight: {{ fonts_type_body_weight_bolder | default: '700' }};
   font-size: var(--font-size-body);
   display: inline-block;
   width: calc(100% - (8px + 0.3125rem));
   vertical-align: top;
 }
 .article--pagination .article--pagination-title {
-  font-style: {{ fonts_type_body_style_italic }};
-  font-weight: {{ fonts_type_body_weight }};
+  font-style: {{ fonts_type_body_style_italic | default: 'italic' }};
+  font-weight: {{ fonts_type_body_weight | default: 'normal' }};
   font-size: var(--font-size-body-small);
   display: none;
   margin-top: {{ space_xxx_small | divided_by: 16.0 | append: 'rem' }};
