@@ -1,0 +1,58 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "settings": {}
+    },
+    "dynamic_flexible_content_giAirU": {
+      "type": "dynamic-flexible-content",
+      "blocks": {
+        "heading_PpLeFq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Take A Tour",
+            "tag": "h2",
+            "alignment": "center"
+          },
+          "blocks": {}
+        },
+        "video_F3ccfY": {
+          "type": "video",
+          "name": "Video",
+          "settings": {
+            "video_source": "shopify",
+            "video": "shopify://files/videos/Hi-Tech_Promo_30.mp4",
+            "caption": "",
+            "width": 100,
+            "autoplay": false,
+            "loop_video": false,
+            "mute": false
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_PpLeFq",
+        "video_F3ccfY"
+      ],
+      "name": "Flexible content",
+      "settings": {
+        "background_color": ""
+      }
+    }
+  },
+  "order": [
+    "page",
+    "dynamic_flexible_content_giAirU"
+  ]
+}

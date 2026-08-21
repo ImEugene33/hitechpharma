@@ -1,0 +1,166 @@
+{% comment %}
+  Simple content block for the page template: one image, one heading,
+  one richtext field. Used e.g. for an "About us" block on a content page.
+{% endcomment %}
+
+{% style %}
+  #shopify-section-{{ section.id }} .image-text {
+    --it-color-heading: {{ settings.color_headings | default: '#222222' }};
+    --it-color-text: {{ settings.color_text | default: '#4d4d4d' }};
+    --it-color-accent: {{ settings.color_links | default: '#195be3' }};
+    --it-space-1: 8px;
+    --it-space-2: 16px;
+    --it-space-3: 24px;
+    --it-space-4: 32px;
+    --it-space-5: 48px;
+    background: transparent;
+    padding: var(--it-space-5) 0;
+  }
+
+  #shopify-section-{{ section.id }} .image-text__container {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  #shopify-section-{{ section.id }} .image-text__media {
+    margin: 0 0 var(--it-space-4);
+    line-height: 0;
+  }
+
+  #shopify-section-{{ section.id }} .image-text__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  #shopify-section-{{ section.id }} .image-text__heading {
+    margin: 0 0 var(--it-space-3);
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--it-color-heading);
+  }
+
+  #shopify-section-{{ section.id }} .image-text__content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--it-color-text);
+  }
+
+  #shopify-section-{{ section.id }} .image-text__content > *:first-child {
+    margin-top: 0;
+  }
+
+  #shopify-section-{{ section.id }} .image-text__content > *:last-child {
+    margin-bottom: 0;
+  }
+
+  #shopify-section-{{ section.id }} .image-text__content a {
+    color: var(--it-color-accent);
+  }
+
+  @media (min-width: 480px) {
+    #shopify-section-{{ section.id }} .image-text__heading {
+      font-size: 24px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    #shopify-section-{{ section.id }} .image-text__heading {
+      font-size: 28px;
+    }
+
+    #shopify-section-{{ section.id }} .image-text__content {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #shopify-section-{{ section.id }} .image-text__heading {
+      font-size: 32px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #shopify-section-{{ section.id }} * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+{% endstyle %}
+
+<section class="image-text" {{ section.shopify_attributes }}>
+  <div class="image-text__container">
+    {%- if section.settings.image != blank -%}
+      <div class="image-text__media">
+        <img
+          src="{{ section.settings.image | image_url: width: 1200 }}"
+          srcset="
+            {{ section.settings.image | image_url: width: 600 }} 600w,
+            {{ section.settings.image | image_url: width: 900 }} 900w,
+            {{ section.settings.image | image_url: width: 1200 }} 1200w,
+            {{ section.settings.image | image_url: width: 1800 }} 1800w
+          "
+          sizes="(min-width: 1024px) 1210px, 100vw"
+          width="{{ section.settings.image.width }}"
+          height="{{ section.settings.image.height }}"
+          alt="{{ section.settings.image_alt | default: section.settings.image.alt | escape }}"
+          loading="lazy"
+          class="image-text__image"
+        >
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.heading != blank -%}
+      <h2 class="image-text__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    {%- if section.settings.text != blank -%}
+      <div class="image-text__content rte">
+        {{ section.settings.text }}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image with text",
+  "class": "image-text--section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image alt text",
+      "info": "Leave blank to use the image's own alt text."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "About us"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Add your text here.</p>"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,154 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "settings": {}
+    },
+    "dynamic_title_image_hero_j6DxkC": {
+      "type": "dynamic-title-image-hero",
+      "name": "Title with image hero",
+      "settings": {
+        "heading": "What is Cyclosome™ Technology?",
+        "heading_color": "#ffffff",
+        "background_color": "#0b2a63",
+        "background_color_end": "#123a82",
+        "image": "shopify://shop_images/download.webp",
+        "image_alt": ""
+      }
+    },
+    "dynamic_flexible_content_nfdAxL": {
+      "type": "dynamic-flexible-content",
+      "blocks": {
+        "image_YpTgNE": {
+          "type": "image",
+          "name": "Image",
+          "settings": {
+            "image": "shopify://shop_images/download_1.avif",
+            "alt": "",
+            "width": 30
+          },
+          "blocks": {}
+        },
+        "text_9DEyaM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Researchers at Hi-Tech recently developed this Cyclosome™ proprietary process. This one-of-a-kind Technology involves the entrapment of hydrophobic compounds in the form of water-soluble cyclodextrin (CD) complex in liposomes. This breakthrough technology has been investigated as a new strategy to combine the relative advantages of CDs and liposomes into one Cyclosome™ system. You can think of all this in terms of a ‘Trojan Horse,’ passing through the liver unharmed and intact.</p><p>This new Cyclosome™ Technology allows the delivery of a wide array of ingredients to the systemic circulation by the intestinal lymphatic route, circumventing first-pass inactivation in the liver for the very first time. The pharmaceutical industry has embraced this cutting-edge Technology in recent years and Hi-Tech Pharmaceuticals is one of the first to utilize it across several products.</p>",
+            "alignment": "left"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "image_YpTgNE",
+        "text_9DEyaM"
+      ],
+      "custom_css": [
+        "@media (max-width: 500px) {.flexible-image {width: 90% !important; }}"
+      ],
+      "name": "Flexible content",
+      "settings": {
+        "background_color": ""
+      }
+    },
+    "dynamic_image_with_text_deY8iU": {
+      "type": "dynamic-image-with-text",
+      "name": "Image with text",
+      "settings": {
+        "section_heading": "",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "image": "shopify://shop_images/download_2.avif",
+        "video_autoplay": false,
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "right",
+        "mobile_image_alignment": "top",
+        "heading": "Health & Wellness with Cyclosome™ Technology",
+        "subheading": "<p>Historically many ingredients are dosed at extremely high concentrations and are actually destroyed by our liver or digestive track before reaching the bloodstream due to their sensitive molecular makeup. The one-of-a-kind Cyclosome™ Technology involves the entrapment of these unique compounds in the form of a Cyclodextrin complex in liposomes and has been investigated as a new strategy to combine the relative advantages of Cyclodextrin complex’s and liposomes into a novel solution for greater bioavailability.<br/><br/></p>",
+        "text_alignment": "left",
+        "button_label": "Button",
+        "button_link": ""
+      }
+    },
+    "dynamic_image_with_text_L9hEF7": {
+      "type": "dynamic-image-with-text",
+      "name": "Image with text",
+      "settings": {
+        "section_heading": "",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 20,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 40,
+        "video_url": "https://www.youtube.com/watch?v=KqxdzM_dAmI&source_ve_path=OTY3MTQ&embeds_referring_euri=https%3A%2F%2Fhitechpharma.com%2F",
+        "video_autoplay": false,
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "left",
+        "mobile_image_alignment": "top",
+        "heading": "How Cyclosome Technology Works",
+        "subheading": "",
+        "text_alignment": "left",
+        "button_label": "Button",
+        "button_link": ""
+      }
+    },
+    "dynamic_quote_jCm9T6": {
+      "type": "dynamic-quote",
+      "name": "Quote banner",
+      "settings": {
+        "quote": "<p>Hi-Tech remains true to the principals that the company was built on - innovation, quality and consistency, and will always be dedicated to ensuring that these principals remain uncompromised.</p>",
+        "attribution_name": "Jared Wheat",
+        "attribution_role": "Hi-Tech President & CEO",
+        "background_color": "#000000",
+        "text_color": "#ffffff",
+        "attribution_color": "#ffffff"
+      }
+    },
+    "dynamic_image_with_text_JPEyqQ": {
+      "type": "dynamic-image-with-text",
+      "name": "Image with text",
+      "settings": {
+        "section_heading": "",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "image": "shopify://shop_images/download_38.avif",
+        "video_autoplay": false,
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "left",
+        "mobile_image_alignment": "top",
+        "heading": "Prohormones with Cyclosome™ Technology",
+        "subheading": "<p>In 1996 Hi-Tech Pharmaceuticals was one of the first companies in the United States to bring powerful Prohormone compounds to market such as Androstenedione, 1- and 4-Androstenediol, 19-NorAndrostenediol/dione, the now legendary 1-Testosterone… to name a few. However, in 2004 our legal team asked us to rethink what these products were and how the government may view them in the future.</p><p>Hi-Tech then spent the last decade working on novel plant androgens and anabolics, as well as DHEA based compounds. Fast forward to 2012 when Hi-Tech acquired ALRI, a company well known for their Prohormone innovation. A few years later Hi-Tech acquired another pioneering juggernaut in Sports One® — one of the earlier pioneers in the Prohormone industry. A short time later Hi-Tech acquired LG Sciences which has helped lead innovation in the Prohormone field to this day. With the acquisition of LG, the Hi-Tech family of brands inherited a broad base of Prohormone Intellectual property and patents.</p><p>On December 18, 2014, President Obama signed the Designer Anabolic Steroid Control Act of 2014 — DASCA for short. This leveled the playing field for Hi-Tech and its family of brands to utilize the past decades technologies we had developed to dominate the legal Prohormone market. We have exclusive licenses on patents such as 1-DHEA, 4-DHEA, 19-NorDHEA, and many more on the horizon. Through this, Hi-Tech has developed a novel, one-of-a-kind Cyclosome® Technology with a cost of more than $1 million to buy the necessary equipment, associated R&D, the ability to manufacture the finished tablets and the ability to bring these powerful hormones to market. With this costly barrier to entry, nobody is likely to have a strong Prohormone or testosterone booster/precursor program than Hi-Tech does in its stable of brands, nor manufacture in our world-class production facilities.</p>",
+        "text_alignment": "left",
+        "button_label": "Button",
+        "button_link": ""
+      }
+    }
+  },
+  "order": [
+    "page",
+    "dynamic_title_image_hero_j6DxkC",
+    "dynamic_flexible_content_nfdAxL",
+    "dynamic_image_with_text_deY8iU",
+    "dynamic_image_with_text_L9hEF7",
+    "dynamic_quote_jCm9T6",
+    "dynamic_image_with_text_JPEyqQ"
+  ]
+}

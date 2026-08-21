@@ -1,0 +1,94 @@
+{% doc %}
+  Renders a lazy-loaded, responsive image.
+  @example
+  {% content_for 'block', type: 'image', id: 'image-1' %}
+{% enddoc %}
+
+<div
+  class="flexible-image"
+  style="--fc-image-width: {{ block.settings.width | default: 100 }}%;"
+  {{ block.shopify_attributes }}
+>
+  {% if block.settings.image != blank %}
+    <img
+      src="{{ block.settings.image | image_url: width: 1200 }}"
+      srcset="
+        {{ block.settings.image | image_url: width: 400 }} 400w,
+        {{ block.settings.image | image_url: width: 800 }} 800w,
+        {{ block.settings.image | image_url: width: 1200 }} 1200w,
+        {{ block.settings.image | image_url: width: 1800 }} 1800w
+      "
+      sizes="(min-width: 1024px) 1210px, 100vw"
+      width="{{ block.settings.image.width }}"
+      height="{{ block.settings.image.height }}"
+      alt="{{ block.settings.alt | default: block.settings.image.alt | escape }}"
+      loading="lazy"
+      class="flexible-image__img"
+    >
+  {% elsif request.design_mode %}
+    <p class="flexible-placeholder">Add an image to this block</p>
+  {% endif %}
+</div>
+
+{% stylesheet %}
+  .flexible-image {
+    width: var(--fc-image-width);
+    margin: 0 auto;
+    line-height: 0;
+  }
+
+  .flexible-image__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .flexible-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    border: 1px dashed #c9c9c9;
+    border-radius: 4px;
+    padding: 24px;
+    margin: 0;
+    font-size: 14px;
+    color: #767676;
+    text-align: center;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "alt",
+      "label": "Alt text",
+      "info": "Leave blank to use the image's own alt text."
+    },
+    {
+      "type": "range",
+      "id": "width",
+      "label": "Image width",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image"
+    }
+  ]
+}
+{% endschema %}

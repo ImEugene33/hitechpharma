@@ -1,0 +1,32 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "settings": {}
+    },
+    "dynamic_image_text_hfNJr7": {
+      "type": "dynamic-image-text",
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/download.avif",
+        "image_alt": "",
+        "heading": "About Hi-Tech Pharmaceuticals",
+        "text": "<p>Hi-Tech Pharmaceuticals is a leading Sports Nutrition manufacturer. Since 1997, Hi-Tech Pharmaceuticals, Inc. and its sister company, Hi-Tech Nutraceuticals, LLC. have been providing quality custom manufacturing services to the pharmaceutical, dietary supplement and beverage industries. Hi-Tech Pharmaceuticals is a cGMP certified company that operates out of four US Production facilities and warehouses, totaling more than 400,000 sq. ft. The two Georgia based production facilities are both located outside Atlanta in the Norcross and Suwanee Advanced Technology areas. Hi-Tech also has Two (2) facilities located outside State College, Pennsylvania. Hi-Tech holds a Drug Manufacturing License issued by the State of Pennsylvania Food and Drug Branch and is registered as a Food and Drug Establishment with the FDA in Pennsylvania. On an annual basis, Hi-Tech Pharmaceuticals can manufacture 35 billion tablets and 10 billion capsules. Hi-Tech Pharmaceuticals can also package 500 million bottles, 250 million blister packs, and 150 million pacquettes.</p><p>Hi-Tech Pharmaceuticals creates, manufactures and sells high-quality products sold by large, major retailers across the United States. These retailers include: Amazon.com, GNC, Rite Aid, Vitamin Shoppe, Vitamin World, KMart, Albertson's, CVS, Meijer, Hannaford, Cardinal Health, McKesson, Mclain, Harmon Stores, Winn-Dixie, Supervalu, Roundy's, Sav-On Drugs, Fruth Pharmacy and over 5,000 independent drug stores, as well as 80,000 convenience stores throughout the United States. Hi-Tech remains true to the principals that the company was built on - innovation, quality and consistency, and will always be dedicated to ensuring that these principals remain uncompromised. Hi-Tech will continue to provide the finest-quality, innovative, science-based Sports Nutritional Supplements and Diet & Energy Aids.</p><p>Hi-Tech Pharmaceuticals' revolutionary line of nutraceutical products is at the forefront of the dietary supplement industry. Hi-Tech holds a key position as the leader and the innovator of natural, proprietary, and preventative healthcare products. Hi-Tech boasts a portfolio of over fifty state-of-the-art nutritional supplements that offer real solutions in the areas of muscle and strength development, fat loss, sexual performance and healthcare. Hi-Tech develops world-class, novel nutraceuticals that are \"Found in Nature...Backed by Science™\". Hi-Tech is dedicated to setting a higher standard of scientific excellence for the dietary supplement industry. Hi-Tech's product line is aimed at improving life-quality and our nutraceuticals are unmatched in quality and efficacy, yet without pharmaceutical prices! Hi-Tech responds to the varying nutrient demands of men and women, from an active lifestyle to that of the well-conditioned athlete.<br/><br/>Other nutrition companies looking to increase scale, revenue, market share, and competitive advantage have also been active with mergers and acquisitions. Hi-Tech has been able to increase its market share in the United States through the acquisition of Florida-based Synergy Nutritional Industries in 2005, and gained a larger market share when it acquired Advanced Performance Supplements (\"APS\") in 2011. Hi-Tech gained further industry dominance when it acquired Nittany Pharmaceuticals in Pennsylvania and ALR Industries in California in 2012. Hi-Tech's recent strategy has been, and according to its leaders will continue to be, growth through M&A activity. In 2015, Hi-Tech also acquired Advanced Pharmaceuticals and Nutritionals, FormuTech Nutrition, Innovative Laboratories, Sports One, LG Sciences and with the most recent acquisition by Hi-Tech of iForce Nutrition was the sixth acquisition for Hi-Tech in 2015. Our strong operational structure and aggressive acquisition strategies have enabled the continued growth of our Sports Nutrition department. As a leading provider of premium Weight Loss and Bodybuilding products in the sports nutrition category, brand growth aligns with the company's continued focus on Sports Supplements, while further diversifying the Hi-Tech portfolio. Hi-Tech continues to be the industry leader in Sports Nutrition and will continue to bolster our Diet & Energy portfolio such as: Fastin®, Lipodrene®, Stimerex-ES®, HydroxyElite®, Viper Hyperdrive®, Dexaprine®,Thermoxyn®, Black Mamba®, Phenadrine® and Lean EFX®.<br/><br/>Hi-Tech's \"Private Label\" flexibility has caused many companies to turn to us to custom manufacture their products. Hi-Tech is able to handle any size customer, with as few as 100 bottles on some of our stock formulas. For larger companies, Hi-Tech has the capacity to meet their demands as well. Hi-Tech keeps thousands of raw materials in stock to enable us to turn most custom formulations within five business days.<br/><br/>Whether you are a company looking for a quality manufacturer to meet your \"Private Label\" needs, or a consumer looking for the best dietary supplements on the market… it's time to change. Compare, ingredient for ingredient, Hi-Tech Pharmaceuticals manufactures products that are one better than the competition! Have your Sports Nutrition or Diet & Energy aid made in our state-of the-art facilities and see our difference... Hi-Tech Pharmaceuticals - Where Science Never Stands Still™!<br/><br/></p>"
+      }
+    }
+  },
+  "order": [
+    "page",
+    "dynamic_image_text_hfNJr7"
+  ]
+}

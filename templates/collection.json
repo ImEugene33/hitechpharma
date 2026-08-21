@@ -1,0 +1,119 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "static-collection": {
+      "type": "static-collection",
+      "blocks": {
+        "menu_CMA44g": {
+          "type": "menu",
+          "settings": {
+            "menu": "shop-by-brand"
+          }
+        },
+        "menu_JUjeGn": {
+          "type": "menu",
+          "settings": {
+            "menu": "sidebar-menu"
+          }
+        }
+      },
+      "block_order": [
+        "menu_CMA44g",
+        "menu_JUjeGn"
+      ],
+      "settings": {
+        "show_collection_image": true,
+        "products_per_page_range": 24,
+        "products_per_row": "4",
+        "sort_by": true,
+        "show_by": true,
+        "grid_list": true,
+        "default_view": "grid-view",
+        "show_sidebar": true,
+        "show_prod_count": true,
+        "filter_style": "groups",
+        "filter_limit": "5",
+        "filter_position": "above_menus",
+        "grid_categories": "",
+        "custom_ordered_categories": "",
+        "custom_ordered_tags": "",
+        "menu_depth_range": 1
+      }
+    },
+    "dynamic_key_products_slider_MAnhcV": {
+      "type": "dynamic-key-products-slider",
+      "name": "Key products slider",
+      "settings": {
+        "heading": "",
+        "slides": [],
+        "show_arrows": true,
+        "show_dots": true,
+        "autoplay": false,
+        "autoplay_speed": 5
+      }
+    },
+    "seo-rich-text": {
+      "type": "dynamic-seo-rich-text",
+      "settings": {
+        "title": "",
+        "text": "{{ collection.metafields.custom.seo_text | metafield_tag }}",
+        "text_alignment": "center",
+        "hide_visually": false
+      }
+    },
+    "dynamic_how_it_works_slider_dqxNhx": {
+      "type": "dynamic-how-it-works-slider",
+      "name": "How it works slider",
+      "settings": {
+        "heading": "HOW [CATEGORY] SUPPLEMENTS WORK",
+        "subtitle": "Why you should take muscle and strength supplements/protein powder",
+        "show_arrows": false,
+        "show_dots": false,
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "dynamic_faq_dxFazV": {
+      "type": "dynamic-faq",
+      "blocks": {
+        "question_yPGmHc": {
+          "type": "question",
+          "repeater": "{{ collection.metafields.custom.faq.value }}",
+          "settings": {
+            "title": "{{ block.repeater.title.value }}",
+            "text": "{{ block.repeater.text | metafield_tag }}"
+          }
+        }
+      },
+      "block_order": [
+        "question_yPGmHc"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "heading": "Frequently asked questions"
+      }
+    },
+    "static-recently-viewed": {
+      "type": "static-recently-viewed",
+      "settings": {
+        "enable_recently_viewed_products": false
+      }
+    }
+  },
+  "order": [
+    "static-collection",
+    "dynamic_key_products_slider_MAnhcV",
+    "seo-rich-text",
+    "dynamic_how_it_works_slider_dqxNhx",
+    "dynamic_faq_dxFazV",
+    "static-recently-viewed"
+  ]
+}

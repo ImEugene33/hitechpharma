@@ -1,0 +1,67 @@
+{% doc %}
+  Renders a rich text block.
+  @example
+  {% content_for 'block', type: 'text', id: 'text-1' %}
+{% enddoc %}
+
+{% if block.settings.text != blank %}
+  <div
+    class="flexible-text rte"
+    style="--fc-color-text: {{ settings.color_text | default: '#4d4d4d' }}; --fc-color-accent: {{ settings.color_links | default: '#195be3' }}; --fc-text-align: {{ block.settings.alignment }};"
+    {{ block.shopify_attributes }}
+  >
+    {{ block.settings.text }}
+  </div>
+{% endif %}
+
+{% stylesheet %}
+  .flexible-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--fc-color-text);
+    text-align: var(--fc-text-align);
+  }
+
+  .flexible-text > *:first-child {
+    margin-top: 0;
+  }
+
+  .flexible-text > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .flexible-text a {
+    color: var(--fc-color-accent);
+  }
+
+  @media (min-width: 768px) {
+    .flexible-text {
+      font-size: 18px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Text",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Add your text here.</p>"
+    },
+    {
+      "type": "text_alignment",
+      "id": "alignment",
+      "label": "Text alignment",
+      "default": "left"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text"
+    }
+  ]
+}
+{% endschema %}

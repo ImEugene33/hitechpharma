@@ -1,0 +1,403 @@
+{% comment %}
+  Tabbed content: a row of tab buttons, each revealing a panel with an
+  optional image and a heading + richtext block. Pure CSS (radio inputs +
+  sibling selectors), no JS. If a tab has no image, its text runs full width.
+{% endcomment %}
+
+{% style %}
+  #shopify-section-{{ section.id }} .tabs-content {
+    --tc-color-heading: {{ settings.color_headings | default: '#222222' }};
+    --tc-color-text: {{ settings.color_text | default: '#4d4d4d' }};
+    --tc-color-accent: {{ settings.color_links | default: '#195be3' }};
+    --tc-color-border: #d5dbe3;
+    --tc-color-active-bg: #ececec;
+    --tc-space-1: 8px;
+    --tc-space-2: 16px;
+    --tc-space-3: 24px;
+    --tc-space-4: 32px;
+    --tc-space-5: 48px;
+    background: transparent;
+    padding: var(--tc-space-5) 0;
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__container {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__heading {
+    margin: 0 0 var(--tc-space-4);
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: var(--tc-color-heading);
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 0 var(--tc-space-4);
+    padding: 0;
+    border-top: 1px solid var(--tc-color-border);
+    border-left: 1px solid var(--tc-color-border);
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    min-height: 44px;
+    padding: var(--tc-space-2) var(--tc-space-3);
+    border-right: 1px solid var(--tc-color-border);
+    border-bottom: 1px solid var(--tc-color-border);
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--tc-color-accent);
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__tab:hover {
+    background: var(--tc-color-active-bg);
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__panel {
+    display: none;
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__panel-inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--tc-space-4);
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__media {
+    flex-shrink: 0;
+    line-height: 0;
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--tc-color-border);
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__media--secondary {
+    width: 100%;
+    margin-top: var(--tc-space-4);
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__tab-heading {
+    margin: 0 0 var(--tc-space-3);
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: var(--tc-color-heading);
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--tc-color-text);
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__text > *:first-child {
+    margin-top: 0;
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__text > *:last-child {
+    margin-bottom: 0;
+  }
+
+  #shopify-section-{{ section.id }} .tabs-content__text a {
+    color: var(--tc-color-accent);
+  }
+
+  @media (min-width: 480px) {
+    #shopify-section-{{ section.id }} .tabs-content__tab {
+      flex: 1 1 auto;
+      width: auto;
+    }
+  }
+
+  @media (min-width: 768px) {
+    #shopify-section-{{ section.id }} .tabs-content__heading {
+      font-size: 32px;
+    }
+
+    #shopify-section-{{ section.id }} .tabs-content__panel-inner {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: var(--tc-space-5);
+    }
+
+    #shopify-section-{{ section.id }} .tabs-content__media {
+      width: 220px;
+    }
+
+    #shopify-section-{{ section.id }} .tabs-content__body {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    #shopify-section-{{ section.id }} .tabs-content__tab-heading {
+      font-size: 26px;
+    }
+
+    #shopify-section-{{ section.id }} .tabs-content__text {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #shopify-section-{{ section.id }} .tabs-content__media {
+      width: 260px;
+    }
+
+    #shopify-section-{{ section.id }} .tabs-content__tab-heading {
+      font-size: 30px;
+    }
+
+    #shopify-section-{{ section.id }} .tabs-content__tab {
+      flex: 1 1 25%;
+    }
+  }
+
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'tab' -%}
+      #Tab-{{ section.id }}-{{ forloop.index }}:checked ~ .tabs-content__tabs label[for="Tab-{{ section.id }}-{{ forloop.index }}"] {
+        color: var(--tc-color-heading);
+        background: var(--tc-color-active-bg);
+      }
+
+      #Tab-{{ section.id }}-{{ forloop.index }}:focus-visible ~ .tabs-content__tabs label[for="Tab-{{ section.id }}-{{ forloop.index }}"] {
+        outline: 2px solid var(--tc-color-accent);
+        outline-offset: -2px;
+      }
+
+      #Tab-{{ section.id }}-{{ forloop.index }}:checked ~ .tabs-content__panels #Panel-{{ section.id }}-{{ forloop.index }} {
+        display: block;
+      }
+    {%- endif -%}
+  {%- endfor -%}
+
+  @media (prefers-reduced-motion: reduce) {
+    #shopify-section-{{ section.id }} * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+  .tabs-content__media--secondary {
+    width: 100% !important;
+  }
+{% endstyle %}
+
+<section class="tabs-content" {{ section.shopify_attributes }}>
+  <div class="tabs-content__container">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="tabs-content__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'tab' -%}
+          <input
+            type="radio"
+            name="TabsGroup-{{ section.id }}"
+            id="Tab-{{ section.id }}-{{ forloop.index }}"
+            class="tabs-content__radio"
+            {% if forloop.first %}checked{% endif %}
+          >
+        {%- endif -%}
+      {%- endfor -%}
+
+      <div class="tabs-content__tabs" role="tablist">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'tab' -%}
+            <label class="tabs-content__tab" for="Tab-{{ section.id }}-{{ forloop.index }}" role="tab">
+              {{ block.settings.label }}
+            </label>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      <div class="tabs-content__panels">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'tab' -%}
+            <div class="tabs-content__panel" id="Panel-{{ section.id }}-{{ forloop.index }}" role="tabpanel" {{ block.shopify_attributes }}>
+              <div class="tabs-content__panel-inner">
+                {%- if block.settings.image != blank -%}
+                  <div class="tabs-content__media tabs-content__media--top">
+                    <img
+                      src="{{ block.settings.image | image_url: width: 600 }}"
+                      srcset="
+                        {{ block.settings.image | image_url: width: 300 }} 300w,
+                        {{ block.settings.image | image_url: width: 450 }} 450w,
+                        {{ block.settings.image | image_url: width: 600 }} 600w
+                      "
+                      sizes="(min-width: 768px) 260px, 100vw"
+                      width="{{ block.settings.image.width }}"
+                      height="{{ block.settings.image.height }}"
+                      alt="{{ block.settings.image_alt | default: block.settings.image.alt | escape }}"
+                      loading="lazy"
+                      class="tabs-content__image"
+                    >
+                  </div>
+                {%- endif -%}
+
+                <div class="tabs-content__body">
+                  {%- if block.settings.heading != blank -%}
+                    <h3 class="tabs-content__tab-heading">{{ block.settings.heading }}</h3>
+                  {%- endif -%}
+
+                  {%- if block.settings.text != blank -%}
+                    <div class="tabs-content__text rte">
+                      {{ block.settings.text }}
+                    </div>
+                  {%- endif -%}
+
+                  {%- if block.settings.image_2 != blank -%}
+                    <div class="tabs-content__media tabs-content__media--secondary">
+                      <img
+                        src="{{ block.settings.image_2 | image_url: width: 1200 }}"
+                        srcset="
+                          {{ block.settings.image_2 | image_url: width: 600 }} 600w,
+                          {{ block.settings.image_2 | image_url: width: 900 }} 900w,
+                          {{ block.settings.image_2 | image_url: width: 1200 }} 1200w
+                        "
+                        sizes="(min-width: 768px) 700px, 100vw"
+                        width="{{ block.settings.image_2.width }}"
+                        height="{{ block.settings.image_2.height }}"
+                        alt="{{ block.settings.image_2_alt | default: block.settings.image_2.alt | escape }}"
+                        loading="lazy"
+                        class="tabs-content__image"
+                      >
+                    </div>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      <script>
+        (() => {
+          const root = document.querySelector('#shopify-section-{{ section.id }} .tabs-content');
+          if (!root) return;
+
+          document.addEventListener('shopify:block:select', (event) => {
+            const panel = event.target.closest('.tabs-content__panel');
+            if (!panel || !root.contains(panel)) return;
+            const radio = document.getElementById(panel.id.replace('Panel-', 'Tab-'));
+            if (radio) radio.checked = true;
+          });
+        })();
+      </script>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tabs with content",
+  "class": "tabs-content--section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Tab label",
+          "default": "Tab label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Optional. Leave empty to make the text run full width."
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "Image alt text",
+          "info": "Leave blank to use the image's own alt text."
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Content heading",
+          "default": "Content heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Content text",
+          "default": "<p>Add your text here.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Image after text",
+          "info": "Optional. Shown below the content text, full width of the text column."
+        },
+        {
+          "type": "text",
+          "id": "image_2_alt",
+          "label": "Image after text alt text",
+          "info": "Leave blank to use the image's own alt text."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tabs with content",
+      "blocks": [
+        {
+          "type": "tab"
+        },
+        {
+          "type": "tab"
+        },
+        {
+          "type": "tab"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

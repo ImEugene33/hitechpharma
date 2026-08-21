@@ -1,0 +1,111 @@
+{% comment %}
+  Flexible content section: merchant builds the content entirely from theme
+  blocks — blocks/heading.liquid, blocks/text.liquid, blocks/image.liquid,
+  blocks/video.liquid, blocks/link.liquid — added, removed, and reordered in
+  the theme editor. App blocks are supported too.
+{% endcomment %}
+
+{% style %}
+  #shopify-section-{{ section.id }} .flexible-content {
+    background: {{ section.settings.background_color | default: 'transparent' }};
+    padding: 48px 0;
+  }
+
+  #shopify-section-{{ section.id }} .flexible-content__container {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  #shopify-section-{{ section.id }} .flexible-content__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  #shopify-section-{{ section.id }} .flexible-content__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    border: 1px dashed #c9c9c9;
+    border-radius: 4px;
+    padding: 24px;
+    margin: 0;
+    font-size: 14px;
+    color: #767676;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    #shopify-section-{{ section.id }} .flexible-content {
+      padding: 64px 0;
+    }
+
+    #shopify-section-{{ section.id }} .flexible-content__blocks {
+      gap: 32px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #shopify-section-{{ section.id }} * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+{% endstyle %}
+
+<section class="flexible-content" {{ section.shopify_attributes }}>
+  <div class="flexible-content__container">
+    {% if section.blocks.size > 0 %}
+      <div class="flexible-content__blocks">
+        {% content_for 'blocks' %}
+      </div>
+    {% elsif request.design_mode %}
+      <p class="flexible-content__placeholder">Add blocks to build this section's content</p>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Flexible content",
+  "class": "flexible-content--section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "image"
+    },
+    {
+      "type": "video"
+    },
+    {
+      "type": "link"
+    },
+    {
+      "type": "@app"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Flexible content",
+      "blocks": [
+        { "type": "heading" },
+        { "type": "text" }
+      ]
+    }
+  ]
+}
+{% endschema %}

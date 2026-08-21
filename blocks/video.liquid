@@ -1,0 +1,172 @@
+{% doc %}
+  Renders a video from a YouTube URL or from a Shopify-hosted video file.
+  @example
+  {% content_for 'block', type: 'video', id: 'video-1' %}
+{% enddoc %}
+
+{% liquid
+  assign has_youtube = false
+  assign has_shopify_video = false
+  if block.settings.video_source == 'youtube' and block.settings.video_url != blank
+    assign has_youtube = true
+  endif
+  if block.settings.video_source == 'shopify' and block.settings.video != blank
+    assign has_shopify_video = true
+  endif
+
+  assign show_caption = false
+  if block.settings.caption != blank and has_youtube
+    assign show_caption = true
+  endif
+  if block.settings.caption != blank and has_shopify_video
+    assign show_caption = true
+  endif
+%}
+
+<div
+  class="flexible-video"
+  style="--fc-video-width: {{ block.settings.width | default: 100 }}%;"
+  {{ block.shopify_attributes }}
+>
+  {% if has_youtube %}
+    <div class="flexible-video__frame">
+      {{
+        block.settings.video_url
+        | external_video_tag: autoplay: block.settings.autoplay, loop: block.settings.loop_video, muted: block.settings.mute, class: 'flexible-video__media', title: block.settings.caption
+      }}
+    </div>
+  {% elsif has_shopify_video %}
+    <div class="flexible-video__frame">
+      {{
+        block.settings.video
+        | video_tag: autoplay: block.settings.autoplay, loop: block.settings.loop_video, muted: block.settings.mute, controls: true, class: 'flexible-video__media'
+      }}
+    </div>
+  {% elsif request.design_mode %}
+    <p class="flexible-placeholder">Add a YouTube URL or a Shopify-hosted video to this block</p>
+  {% endif %}
+
+  {% if show_caption %}
+    <p class="flexible-video__caption">{{ block.settings.caption }}</p>
+  {% endif %}
+</div>
+
+{% stylesheet %}
+  .flexible-video {
+    width: var(--fc-video-width);
+    margin: 0 auto;
+  }
+
+  .flexible-video__frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #000;
+  }
+
+  .flexible-video__frame .flexible-video__media,
+  .flexible-video__frame iframe,
+  .flexible-video__frame video {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .flexible-video__caption {
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #767676;
+    text-align: center;
+  }
+
+  .flexible-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    border: 1px dashed #c9c9c9;
+    border-radius: 4px;
+    padding: 24px;
+    margin: 0;
+    font-size: 14px;
+    color: #767676;
+    text-align: center;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Video",
+  "settings": [
+    {
+      "type": "select",
+      "id": "video_source",
+      "label": "Video source",
+      "options": [
+        { "value": "youtube", "label": "YouTube URL" },
+        { "value": "shopify", "label": "Video uploaded to Shopify" }
+      ],
+      "default": "youtube"
+    },
+    {
+      "type": "video_url",
+      "id": "video_url",
+      "label": "YouTube video URL",
+      "accept": ["youtube"],
+      "visible_if": "{{ block.settings.video_source == 'youtube' }}"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video",
+      "visible_if": "{{ block.settings.video_source == 'shopify' }}"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption",
+      "info": "Optional. Shown below the video and used as its accessible title."
+    },
+    {
+      "type": "range",
+      "id": "width",
+      "label": "Video width",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "info": "Autoplaying video is automatically muted by the browser.",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "loop_video",
+      "label": "Loop",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "mute",
+      "label": "Mute",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video"
+    }
+  ]
+}
+{% endschema %}

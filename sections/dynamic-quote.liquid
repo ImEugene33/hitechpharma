@@ -1,0 +1,217 @@
+{% comment %}
+  Full-bleed dark quote banner: a large centered quote with straight double
+  quotes, and a small monospace attribution line below (name | role).
+{% endcomment %}
+
+{% style %}
+  #shopify-section-{{ section.id }} .quote-banner {
+    --qb-color-bg: {{ section.settings.background_color | default: '#000000' }};
+    --qb-color-text: {{ section.settings.text_color | default: '#ffffff' }};
+    --qb-color-attribution: {{ section.settings.attribution_color | default: '#ffffff' }};
+    --qb-space-1: 8px;
+    --qb-space-2: 16px;
+    --qb-space-3: 24px;
+    --qb-space-4: 32px;
+    --qb-space-5: 48px;
+    --qb-space-6: 64px;
+    --qb-space-7: 96px;
+    --qb-space-8: 128px;
+    background: var(--qb-color-bg);
+    padding: var(--qb-space-6) 0;
+  }
+
+  #shopify-section-{{ section.id }} .quote-banner__container {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  #shopify-section-{{ section.id }} .quote-banner__text {
+    margin: 0 auto;
+    max-width: 620px;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: center;
+    color: var(--qb-color-text);
+  }
+
+  #shopify-section-{{ section.id }} .quote-banner__text p {
+    margin: 0;
+  }
+  #shopify-section-{{ section.id }} .quote-banner__text a {
+    text-decoration: none;
+    color:#fff;
+  }
+   #shopify-section-{{ section.id }} .quote-banner__text a:hover {
+    color: rgb(0, 70, 212);
+   }
+  #shopify-section-{{ section.id }} .quote-banner__text p + p {
+    margin-top: var(--qb-space-2);
+  }
+
+  /* #shopify-section-{{ section.id }} .quote-banner__text::before {
+    content: '"';
+  }
+
+  #shopify-section-{{ section.id }} .quote-banner__text::after {
+    content: '"';
+  } */
+
+  #shopify-section-{{ section.id }} .quote-banner__footer {
+    margin: var(--qb-space-4) 0 0;
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .quote-banner__citation {
+    display: inline-block;
+    font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: 0.4px;
+    color: var(--qb-color-attribution);
+  }
+
+  #shopify-section-{{ section.id }} .quote-banner__citation::before {
+    content: '\2013\00A0';
+  }
+
+  #shopify-section-{{ section.id }} .quote-banner__divider {
+    display: inline-block;
+    margin: 0 8px;
+    opacity: 0.6;
+  }
+
+  @media (min-width: 480px) {
+    #shopify-section-{{ section.id }} .quote-banner__text {
+      max-width: 680px;
+      font-size: 22px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    #shopify-section-{{ section.id }} .quote-banner {
+      padding: var(--qb-space-7) 0;
+    }
+
+    #shopify-section-{{ section.id }} .quote-banner__text {
+      max-width: 820px;
+      font-size: 26px;
+    }
+
+    #shopify-section-{{ section.id }} .quote-banner__footer {
+      margin-top: var(--qb-space-5);
+    }
+
+    #shopify-section-{{ section.id }} .quote-banner__citation {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #shopify-section-{{ section.id }} .quote-banner__text {
+      max-width: 900px;
+      font-size: 30px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    #shopify-section-{{ section.id }} .quote-banner {
+      padding: var(--qb-space-8) 0;
+    }
+
+    #shopify-section-{{ section.id }} .quote-banner__text {
+      max-width: 930px;
+      font-size: 34px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #shopify-section-{{ section.id }} * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+{% endstyle %}
+
+<section class="quote-banner" {{ section.shopify_attributes }}>
+  <div class="quote-banner__container">
+    {%- if section.settings.quote != blank -%}
+      <blockquote class="quote-banner__text">
+        {{- section.settings.quote -}}
+      </blockquote>
+    {%- endif -%}
+
+    {%- if section.settings.attribution_name != blank or section.settings.attribution_role != blank -%}
+      <footer class="quote-banner__footer">
+        <cite class="quote-banner__citation">
+          {%- if section.settings.attribution_name != blank -%}
+            {{- section.settings.attribution_name -}}
+          {%- endif -%}
+          {%- if section.settings.attribution_name != blank and section.settings.attribution_role != blank -%}
+            <span class="quote-banner__divider" aria-hidden="true">|</span>
+          {%- endif -%}
+          {%- if section.settings.attribution_role != blank -%}
+            {{- section.settings.attribution_role -}}
+          {%- endif -%}
+        </cite>
+      </footer>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Quote banner",
+  "class": "quote-banner--section",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "quote",
+      "label": "Quote",
+      "default": "<p>Hi-Tech remains true to the principals that the company was built on - innovation, quality and consistency, and will always be dedicated to ensuring that these principals remain uncompromised.</p>"
+    },
+    {
+      "type": "text",
+      "id": "attribution_name",
+      "label": "Attribution name",
+      "default": "Jared Wheat"
+    },
+    {
+      "type": "text",
+      "id": "attribution_role",
+      "label": "Attribution role",
+      "default": "Hi-Tech President & CEO"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Quote color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "attribution_color",
+      "label": "Attribution color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quote banner",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}

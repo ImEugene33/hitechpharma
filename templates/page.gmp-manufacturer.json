@@ -1,0 +1,76 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "settings": {}
+    },
+    "dynamic_flexible_content_HXkUyp": {
+      "type": "dynamic-flexible-content",
+      "blocks": {
+        "heading_myVtQ6": {
+          "type": "heading",
+          "settings": {
+            "heading": "cGMP Manufacturer",
+            "tag": "h2",
+            "alignment": "center"
+          },
+          "blocks": {}
+        },
+        "text_3hMayh": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Ensuring that what is on the label matches what is inside the product.</h3><p><strong>cGMP certification</strong>(Current Good Manufacturing Practice) is a quality system standard enforced by regulatory bodies like the FDA. It guarantees that products—such as pharmaceuticals, food, and medical devices—are consistently manufactured, controlled, and tested to meet the highest safety, purity, and quality standards.<br/><br/></p>",
+            "alignment": "center"
+          },
+          "blocks": {}
+        },
+        "image_MLxrNT": {
+          "type": "image",
+          "name": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Hi-Tech_Pharmaceuticals_Inc._-_2026_Certificate_-_cGMP_Dietary_Supplements_-_01.09.2026_e42db471-7f96-4d2c-9bc4-b91e0d6adb7f.png",
+            "alt": "",
+            "width": 80
+          },
+          "blocks": {}
+        },
+        "link_T7wwcj": {
+          "type": "link",
+          "name": "Link",
+          "settings": {
+            "url": "https://www.asifood.com/gmp-audits-1.html",
+            "text": "",
+            "image": "shopify://shop_images/asilogo_large_0fd7c22b-cb47-425a-8044-7b232101b466.jpg",
+            "open_in_new_tab": false,
+            "alignment": "center"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_myVtQ6",
+        "text_3hMayh",
+        "image_MLxrNT",
+        "link_T7wwcj"
+      ],
+      "name": "Flexible content",
+      "settings": {
+        "background_color": ""
+      }
+    }
+  },
+  "order": [
+    "page",
+    "dynamic_flexible_content_HXkUyp"
+  ]
+}

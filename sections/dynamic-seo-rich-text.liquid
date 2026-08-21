@@ -1,0 +1,125 @@
+<script
+  type="application/json"
+  data-section-id="{{ section.id }}"
+  data-section-type="dynamic-seo-rich-text"
+></script>
+
+{% if section.settings.text != blank or section.settings.title != blank %}
+  {% style %}
+    #shopify-section-{{ section.id }} .seo-rich-text--content {
+      text-align: {{ section.settings.text_alignment }};
+    }
+    #shopify-section-{{ section.id }} .seo-rich-text--container {
+      max-width: 900px;
+    }
+    #shopify-section-{{ section.id }} .seo-rich-text--title {
+      margin: 0 0 16px;
+      font-size: 32px;
+      line-height: 1.25;
+      font-weight: 700;
+      text-align: {{ section.settings.text_alignment }};
+      color: {{ settings.color_links }};
+    }
+    
+     #shopify-section-{{ section.id }} .seo-rich-text--content h2 {
+      margin: 0 0 16px;
+      font-size: 32px;
+      color: {{ settings.color_links }};
+     }
+     #shopify-section-{{ section.id }} .seo-rich-text--content h2 {
+      margin: 0 0 16px;
+      font-size: 32px;
+     }
+     #shopify-section-{{ section.id }} .seo-rich-text--content p {
+      color: {{ settings.color_links }};
+     }
+    #shopify-section-{{ section.id }} .seo-rich-text--content p strong,
+    #shopify-section-{{ section.id }} .seo-rich-text--content p b {
+      color: {{ settings.color_links }};
+      font-size: 24px;
+    }
+    @media(max-width: 769px) {
+       #shopify-section-{{ section.id }} .seo-rich-text--content p strong,
+    #shopify-section-{{ section.id }} .seo-rich-text--content p b  {
+      font-size: 18px;
+    }
+      #shopify-section-{{ section.id }} .seo-rich-text--content h2 {
+      margin: 0 0 16px;
+      font-size: 26px;
+     }
+    }
+  {% endstyle %}
+{%- if section.settings.text != blank -%}
+  
+
+  <section class="seo-rich-text--section" {{ section.shopify_attributes }}>
+    <div class="seo-rich-text--container rich-text--container">
+      {%- if section.settings.title != blank -%}
+        <h2 class="seo-rich-text--title{% if section.settings.hide_visually %} visually-hidden{% endif %}">
+          {{ section.settings.title }}
+        </h2>
+      {%- endif -%}
+      <div
+        class="seo-rich-text--content rte{% if section.settings.hide_visually %} visually-hidden{% endif %}"
+        data-rte
+      >
+        {{ section.settings.text }}
+      </div>
+    </div>
+  </section>
+  {%- endif -%}
+{% endif %}
+
+{% schema %}
+{
+  "name": "SEO rich text",
+  "class": "seo-rich-text--section-wrapper",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "SEO text",
+      "info": "Click the dynamic source icon on this field to connect it to a collection metafield instead of typing text manually.",
+      "default": "<p>Add SEO text for this collection here, or connect this field to a metafield.</p>"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_visually",
+      "label": "Hide visually",
+      "info": "Keeps the text present in the page's HTML for search engines, but hides it from visitors on the storefront.",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "SEO rich text",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}

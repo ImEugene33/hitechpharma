@@ -1,0 +1,478 @@
+{% comment %}
+  Requires a metaobject definition with type handle "key_product_slide" and fields:
+    label         (Single line text)   e.g. "Best Sellers"
+    product       (Product reference)
+    blurb         (Single line text)   e.g. "About product blurb"
+    benefits      (Rich text)          bullet list of benefits
+    accent_color  (Color, optional)    overrides the panel color per slide
+
+  Slides come from the current collection's metafield (custom.key_product_slides,
+  type "Metaobject reference list" pointing at key_product_slide) so the same
+  section on the same collection template can show a different set per collection.
+  Falls back to the section's own "Product slides" setting when that metafield
+  is empty (e.g. the section is used outside a collection template).
+{% endcomment %}
+
+{%- assign metafield_slides = collection.metafields.custom.key_product_slides.value -%}
+{%- if metafield_slides and metafield_slides.size > 0 -%}
+  {%- assign slides = metafield_slides -%}
+{%- else -%}
+  {%- assign slides = section.settings.slides -%}
+{%- endif -%}
+{%- assign slide_count = slides.size -%}
+
+{% style %}
+  #shopify-section-{{ section.id }} .key-products-slider {
+    --kps-color-accent: {{ settings.color_links | default: '#195be3' }};
+    --kps-color-accent-text: #ffffff;
+    --kps-color-heading: {{ settings.color_headings | default: '#222222' }};
+    --kps-color-text: {{ settings.color_text | default: '#4d4d4d' }};
+    --kps-radius: 0px;
+    --kps-space-1: 8px;
+    --kps-space-2: 16px;
+    --kps-space-3: 24px;
+    --kps-space-4: 32px;
+    --kps-space-5: 48px;
+    --kps-space-6: 64px;
+    padding: var(--kps-space-5) 0;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slider__container {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slider__heading {
+    margin: 0 0 var(--kps-space-3);
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--kps-color-heading);
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .swiper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  #shopify-section-{{ section.id }} .swiper-wrapper {
+    display: flex;
+    box-sizing: content-box;
+    transition-property: transform;
+  }
+
+  #shopify-section-{{ section.id }} .swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slide {
+    display: flex;
+    flex-direction: column;
+    background: var(--kps-accent, var(--kps-color-accent));
+    border-radius: var(--kps-radius);
+    overflow: hidden;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slide__panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--kps-space-2);
+    padding: var(--kps-space-4) var(--kps-space-3);
+    color: var(--kps-color-accent-text);
+  }
+ #shopify-section-{{ section.id }} .key-products-slide__panel .key-products-slide__blurb a {
+  color: var(--kps-color-accent-text);
+ }
+ #shopify-section-{{ section.id }} .key-products-slide__panel .key-products-slide__benefits  a {
+  color: var(--kps-color-accent-text);
+  text-decoration: underline;
+ }
+  #shopify-section-{{ section.id }} .key-products-slide__eyebrow {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slide__title {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.15;
+    font-weight: 700;
+    color: inherit;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slide__blurb {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slide__benefits {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slide__benefits ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slide__benefits li + li {
+    margin-top: var(--kps-space-1);
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slide__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-top: var(--kps-space-2);
+    padding: 0 var(--kps-space-3);
+    border-radius: 4px;
+    background: var(--kps-color-accent-text);
+    color: var(--kps-color-accent, var(--kps-color-accent));
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slide__cta:focus-visible,
+  #shopify-section-{{ section.id }} .key-products-slider__nav:focus-visible {
+    outline: 2px solid var(--kps-color-accent-text);
+    outline-offset: 2px;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slide__media {
+    position: relative;
+    width: 100%;
+    max-height: 670px;
+    aspect-ratio: 4 / 3;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slide__image-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slide__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slider__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--kps-space-3);
+    margin-top: var(--kps-space-3);
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slider__nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: var(--kps-color-accent);
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slider__nav svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slider__nav.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slider__pagination {
+    width:max-content;
+    display: flex;
+    align-items: center;
+    gap: var(--kps-space-1);
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slider__pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--kps-color-accent);
+    opacity: 0.3;
+    margin: 0;
+  }
+
+  #shopify-section-{{ section.id }} .key-products-slider__pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+
+  @media (min-width: 768px) {
+    #shopify-section-{{ section.id }} .key-products-slide {
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+    #shopify-section-{{ section.id }} .key-products-slide__panel {
+      width: 45%;
+      justify-content: center;
+      padding: var(--kps-space-6) var(--kps-space-5);
+    }
+
+    #shopify-section-{{ section.id }} .key-products-slide__media {
+      width: 55%;
+      aspect-ratio: auto;
+    }
+
+    #shopify-section-{{ section.id }} .key-products-slide__title {
+      font-size: 36px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #shopify-section-{{ section.id }} * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+  .key-products-slider--empty {
+    display: none;
+  }
+{% endstyle %}
+
+<section class="key-products-slider {% if slide_count == 0 %}key-products-slider--empty{% endif %}" {{ section.shopify_attributes }}>
+  <div class="key-products-slider__container">
+    <h2 class="key-products-slider__heading{% if section.settings.heading == blank %} visually-hidden{% endif %}">
+      {{ section.settings.heading | default: 'Key products' }}
+    </h2>
+
+    {%- if slide_count > 0 -%}
+      <div
+        id="KeyProductsSlider-{{ section.id }}"
+        class="key-products-slider__root"
+        data-autoplay="{{ section.settings.autoplay }}"
+        data-autoplay-speed="{{ section.settings.autoplay_speed }}"
+      >
+        <div class="key-products-slider__swiper swiper">
+          <div class="swiper-wrapper">
+            {%- for slide in slides -%}
+              {%- assign product = slide.product.value -%}
+              {%- if product -%}
+                <div class="swiper-slide">
+                  <div
+                    class="key-products-slide"
+                    {% if slide.accent_color.value != blank %}
+                      style="--kps-accent: {{ slide.accent_color.value }};"
+                    {% endif %}
+                  >
+                    <div class="key-products-slide__panel">
+                      {%- if slide.label.value != blank -%}
+                        <p class="key-products-slide__eyebrow">{{ slide.label.value }}</p>
+                      {%- endif -%}
+
+                      <h3 class="key-products-slide__title">{{ product.title }}</h3>
+
+                      {%- if slide.blurb1.value != blank -%}
+                        <div class="key-products-slide__blurb">{{ slide.blurb1 | metafield_tag }}</div>
+                      {%- endif -%}
+
+                      {%- if slide.benefits.value != blank -%}
+                        <div class="key-products-slide__benefits rte">{{ slide.benefits | metafield_tag }}</div>
+                      {%- endif -%}
+
+                      <a href="{{ product.url }}" class="key-products-slide__cta">
+                        Shop now
+                      </a>
+                    </div>
+
+                    <div class="key-products-slide__media">
+                      <a
+                        href="{{ product.url }}"
+                        class="key-products-slide__image-link"
+                        aria-label="{{ product.title | escape }}"
+                      >
+                        {%- if product.featured_image -%}
+                          <img
+                            src="{{ product.featured_image | image_url: width: 800 }}"
+                            srcset="
+                              {{ product.featured_image | image_url: width: 400 }} 400w,
+                              {{ product.featured_image | image_url: width: 1200 }} 800w,
+                              {{ product.featured_image | image_url: width: 1200 }} 1200w
+                            "
+                            sizes="(min-width: 768px) 55vw, 100vw"
+                            width="{{ product.featured_image.width }}"
+                            height="{{ product.featured_image.height }}"
+                            alt="{{ product.featured_image.alt | default: product.title | escape }}"
+                            loading="lazy"
+                            class="key-products-slide__image"
+                          >
+                        {%- endif -%}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              {%- elsif request.design_mode -%}
+                <div class="swiper-slide">
+                  <p class="key-products-slider__empty">
+                    This slide is missing a Product &mdash; edit the metaobject entry and choose one.
+                  </p>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+
+        <div class="key-products-slider__controls">
+          {%- if section.settings.show_arrows -%}
+            <button type="button" class="key-products-slider__nav key-products-slider__nav--prev" aria-label="Previous product">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+            </button>
+          {%- endif -%}
+
+          {%- if section.settings.show_dots -%}
+            <div class="key-products-slider__pagination"></div>
+          {%- endif -%}
+
+          {%- if section.settings.show_arrows -%}
+            <button type="button" class="key-products-slider__nav key-products-slider__nav--next" aria-label="Next product">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+            </button>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <script type="module">
+        const root = document.getElementById('KeyProductsSlider-{{ section.id }}');
+
+        if (root && !document.getElementById('KeyProductsSlider-swiper-css')) {
+          const link = document.createElement('link');
+          link.id = 'KeyProductsSlider-swiper-css';
+          link.rel = 'stylesheet';
+          link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+          document.head.appendChild(link);
+        }
+
+        if (root) {
+          try {
+            const { default: Swiper } = await import(
+              'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+            );
+            const slideCount = root.querySelectorAll('.swiper-slide').length;
+            const autoplaySpeed = parseFloat(root.dataset.autoplaySpeed || '5') * 1000;
+
+            new Swiper(root.querySelector('.key-products-slider__swiper'), {
+              loop: slideCount > 1,
+              speed: 500,
+              watchOverflow: true,
+              autoHeight: true,
+              navigation: {
+                nextEl: root.querySelector('.key-products-slider__nav--next'),
+                prevEl: root.querySelector('.key-products-slider__nav--prev'),
+              },
+              pagination: {
+                el: root.querySelector('.key-products-slider__pagination'),
+                clickable: true,
+              },
+              autoplay:
+                root.dataset.autoplay === 'true'
+                  ? { delay: autoplaySpeed, disableOnInteraction: false }
+                  : false,
+              a11y: { enabled: true },
+            });
+          } catch (error) {
+            console.error('Key products slider: failed to load Swiper', error);
+          }
+        }
+      </script>
+    {%- elsif request.design_mode -%}
+      <p class="key-products-slider__empty">
+        Add product slides above using the metaobject list setting for this section.
+      </p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Key products slider",
+  "class": "key-products-slider--section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Optional. Kept in the page for accessibility even when hidden visually."
+    },
+    
+    {
+      "type": "metaobject_list",
+      "id": "slides",
+      "label": "Product slides (fallback)",
+      "metaobject_type": "key_product_slide",
+      "limit": 12,
+      "info": "Only used when the collection has no value in its 'Key product slides' metafield. Each entry needs: Label, Product, Blurb, Benefits (rich text), Accent color (optional)."
+    },
+    {
+      "type": "header",
+      "content": "Slider settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show arrows",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dots",
+      "label": "Show pagination dots",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Autoplay speed",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "default": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "Key products slider",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

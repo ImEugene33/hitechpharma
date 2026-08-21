@@ -1,0 +1,76 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "settings": {}
+    },
+    "dynamic_flexible_content_6T8fRa": {
+      "type": "dynamic-flexible-content",
+      "blocks": {
+        "heading_tYEhYC": {
+          "type": "heading",
+          "settings": {
+            "heading": "BPI Sports: a Trusted Name in Sports Nutrition",
+            "tag": "h2",
+            "alignment": "center"
+          },
+          "blocks": {}
+        },
+        "text_yUF7M6": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>BPI Sports Supplements</strong>, a Trusted</h3><h2>Name in Sports Nutrition</h2>",
+            "alignment": "center"
+          },
+          "blocks": {}
+        },
+        "image_KWVdEg": {
+          "type": "image",
+          "name": "Image",
+          "settings": {
+            "image": "shopify://shop_images/bpi-sports-best_bcaa_India.jpg",
+            "alt": "",
+            "width": 45
+          },
+          "blocks": {}
+        },
+        "text_aqNd6M": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "text": "<p><strong>BPI Sports supplements</strong>have become a trusted name in the sports nutrition industry, known for innovative formulas designed to support energy, performance, recovery, and overall training results. For athletes, bodybuilders, and fitness enthusiasts who demand quality ingredients and reliable results, BPI Sports delivers products designed to help you push harder in the gym and stay consistent with your goals.<br/><br/>Founded with a focus on performance-driven nutrition, BPI Sports has built a reputation for creating some of the most recognizable supplements in the industry. Their lineup includes powerful<strong>pre-workout formulas, premium protein powders, amino acid blends, and recovery support supplements</strong>. Each product is developed with carefully selected ingredients designed to support strength, endurance, and muscle development while helping athletes maximize every workout.<br/><br/>One of the most popular categories within the BPI Sports lineup is their<strong>pre-workout supplements</strong>, which are designed to support workout intensity and help you stay focused during demanding training sessions. These formulas are crafted to provide clean, usable energy that helps power through workouts without the uncomfortable crash that can occur with some stimulant-heavy products. Many athletes turn to BPI Sports pre-workouts to help increase training intensity and maintain motivation throughout longer or more challenging sessions.<br/><br/>BPI Sports is also well known for their <strong>protein powders</strong>, which play an important role in supporting muscle recovery and daily protein intake. Quality protein supplementation can help athletes maintain muscle mass and support the body's natural repair processes after intense exercise. BPI’s protein formulas are designed to mix easily, taste great, and deliver the amino acids needed to support muscle growth and recovery.</p><p>In addition to pre-workout and protein products, BPI Sports offers a variety of <strong>performance and recovery supplements</strong>, including amino acid formulas designed to support endurance, hydration, and post-workout recovery. These supplements help athletes maintain performance throughout training while supporting the recovery process needed to stay consistent week after week.</p><p>At Hi-Tech Pharmaceuticals, we are proud to offer a wide selection of<strong>BPI Sports supplements</strong>so you can find the right products to support your fitness routine. Whether you are looking to increase workout energy, support muscle recovery, or maintain peak performance, BPI Sports provides trusted sports nutrition formulas designed to help you stay focused on your goals.</p>",
+            "alignment": "center"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_tYEhYC",
+        "text_yUF7M6",
+        "image_KWVdEg",
+        "text_aqNd6M"
+      ],
+      "custom_css": [
+        "@media (max-width: 500px) {.flexible-image {width: 100%; }}"
+      ],
+      "name": "Flexible content",
+      "settings": {
+        "background_color": ""
+      }
+    }
+  },
+  "order": [
+    "page",
+    "dynamic_flexible_content_6T8fRa"
+  ]
+}

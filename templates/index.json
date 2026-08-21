@@ -1,0 +1,286 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pxs_image_with_text_overlay_cMdLAM": {
+      "type": "pxs-image-with-text-overlay",
+      "settings": {
+        "section_height": "small",
+        "image": "shopify://shop_images/LIPODRENE-SLIDE-HOMEPAGE.jpg",
+        "position": "center center",
+        "title": "Lipodrene Weight Loss Supplements",
+        "heading_tag": "h1",
+        "text": "",
+        "content_position": "center-center",
+        "color": "#ffffff",
+        "overlay_background": "#000000",
+        "overlay_opacity": 50,
+        "link": "shopify://collections/lipodrene-weight-loss-supplements",
+        "button_text": "Shop Lipodrene®"
+      }
+    },
+    "dynamic_featured_collection_pP8Adq": {
+      "type": "dynamic-featured-collection",
+      "settings": {
+        "title": "Top Sellers",
+        "layout": "slideshow",
+        "collection": "frontpage",
+        "product_count": 5,
+        "cta_label": "",
+        "cta_button_style": "primary"
+      }
+    },
+    "dynamic_rich_text_PXwJMg": {
+      "type": "dynamic-rich-text",
+      "settings": {
+        "width": "regular",
+        "title": "Ensuring that what is on the label matches what is inside the product.",
+        "text": "<p><strong>cGMP </strong>(Current Good Manufacturing Practice) certification is a quality system standard enforced by regulatory bodies such as the FDA. It guarantees that products like ours are consistently manufactured, controlled, and tested to meet the highest standards of safety, purity, and quality. <a href=\"https://hitechpharma.com/pages/gmp-manufacturer\" target=\"_blank\" title=\"https://hitechpharma.com/pages/gmp-manufacturer\">View Our Superior Audit Rating</a><br/><br/></p>",
+        "heading_size": "small",
+        "text_alignment": "center"
+      }
+    },
+    "dynamic_promo_mosaic_J4zKMX": {
+      "type": "dynamic-promo-mosaic",
+      "blocks": {
+        "promotion_Jk9V94": {
+          "type": "promotion",
+          "settings": {
+            "image": "shopify://shop_images/Precision-Protein_dubai_chocolate.jpg",
+            "title": "NEW FLAVOR",
+            "text": "DUBAI CHOCOLATE",
+            "color": "#ffffff",
+            "block_link": "shopify://products/precision-protein",
+            "button_text": "BUY IT",
+            "button_style": "primary",
+            "show_overlay": false,
+            "background": "",
+            "opacity": 50
+          }
+        },
+        "promotion_MDJh9t": {
+          "type": "promotion",
+          "settings": {
+            "image": "shopify://shop_images/GymessentialswithAndriolbottle.png",
+            "title": "",
+            "text": "PATENTED ORAL TESTOSTERONE SUPPORT",
+            "color": "#ffffff",
+            "block_link": "shopify://products/andriol-elevate-testosterone",
+            "button_text": "BUY IT",
+            "button_style": "primary",
+            "show_overlay": false,
+            "background": "",
+            "opacity": 50
+          }
+        },
+        "promotion_NcwCaw": {
+          "type": "promotion",
+          "settings": {
+            "image": "shopify://shop_images/AMP3D-SLIDE-HOMEPAGE_1f2c8980-84da-47a3-8b5c-3097f6dc2108.jpg",
+            "title": "Amp3d™ | Pre-workout",
+            "text": "",
+            "color": "#000000",
+            "block_link": "shopify://products/amp3dpre-workout-and-advanced-nitric-oxide-supplement",
+            "button_text": "BUY IT",
+            "button_style": "primary",
+            "show_overlay": false,
+            "background": "",
+            "opacity": 50
+          }
+        }
+      },
+      "block_order": [
+        "promotion_Jk9V94",
+        "promotion_MDJh9t",
+        "promotion_NcwCaw"
+      ],
+      "settings": {
+        "title": "",
+        "section_height": "small",
+        "text_alignment": "top-left",
+        "maintain_aspect_ratio": false,
+        "compress_blocks": true
+      }
+    },
+    "dynamic_collection_list_9qAKbp": {
+      "type": "dynamic-collection-list",
+      "blocks": {
+        "collection_deHhgD": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "protein"
+          }
+        },
+        "collection_erqVG6": {
+          "type": "collection",
+          "settings": {
+            "collection": "muscle-strength"
+          }
+        },
+        "collection_xzwAAE": {
+          "type": "collection",
+          "settings": {
+            "collection": "healthcare"
+          }
+        },
+        "collection_79xRCJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "pre-workouts"
+          }
+        },
+        "collection_6iJahk": {
+          "type": "collection",
+          "settings": {
+            "collection": "weight-loss-energy"
+          }
+        }
+      },
+      "block_order": [
+        "collection_deHhgD",
+        "collection_erqVG6",
+        "collection_xzwAAE",
+        "collection_79xRCJ",
+        "collection_6iJahk"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Popular Categories"
+      }
+    },
+    "dynamic_image_with_text_Ax89KK": {
+      "type": "dynamic-image-with-text",
+      "settings": {
+        "section_heading": "Who We Are",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "image": "shopify://shop_images/hi-tech-pharmaceuticals-main-building-sign.jpg",
+        "video_url": "",
+        "video_autoplay": false,
+        "crop": "left",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "left",
+        "mobile_image_alignment": "top",
+        "heading": "Hi-Tech Pharmaceuticals | Innovation, Quality, Consistency",
+        "subheading": "<p>Founded in 1997 and is a Georgia corporation based just north of Atlanta, in the city of Norcross, Hi-Tech Pharmaceuticals creates, manufactures, and markets premium nutritional products sold through major national retailers and distribution networks across the United States. Its products are available through leading outlets, including Amazon, GNC, CVS, Rite Aid, Vitamin Shoppe, Cardinal Health, McKesson, and thousands of independent pharmacies and convenience stores nationwide. From its founding, the company has remained committed to the principles of <strong>innovation, quality, and consistency</strong>, delivering science-driven formulations designed to meet evolving consumer needs.</p>",
+        "text_alignment": "left",
+        "button_label": "Learn More",
+        "button_link": "https://hitechpharma.com/pages/about-hi-tech-pharmaceuticals"
+      }
+    },
+    "1521054862775": {
+      "type": "dynamic-video",
+      "settings": {
+        "title": "Hi-Tech Fly Through",
+        "url": "https://youtu.be/rw30hLlyJFg",
+        "show_caption": false,
+        "caption": "<p>A short description of the video.</p>",
+        "autoplay": false,
+        "aspect_ratio": "16-9",
+        "position": "center-center",
+        "show_overlay": false,
+        "background": "#000000",
+        "opacity": 50
+      }
+    },
+    "dynamic_image_with_text_UMfkre": {
+      "type": "dynamic-image-with-text",
+      "disabled": true,
+      "settings": {
+        "section_heading": "Health & Wellness",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "image": "shopify://shop_images/wellness_products.png",
+        "video_url": "",
+        "video_autoplay": false,
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "right",
+        "mobile_image_alignment": "top",
+        "heading": "Hi-Tech Supplements to Support Immune Health",
+        "subheading": "<p>Hi-Tech Pharmaceuticals provides you with the highest concentration of deliverable immune health, antioxidants, and multivitamins and minerals available today in an easy-to-digest Cyclosome Technology delivery. <a href=\"https://hitechpharma.com/pages/wellness\" title=\"https://hitechpharma.com/pages/wellness\">Learn more about all our wellness products</a> or hit the button below to shop.<br/><br/></p>",
+        "text_alignment": "left",
+        "button_label": "Shop Wellness",
+        "button_link": "https://hitechpharma.com/collections/healthcare"
+      }
+    },
+    "1643057614281d031f": {
+      "type": "pxs-image-with-text-overlay",
+      "settings": {
+        "section_height": "small",
+        "image": "shopify://shop_images/CYCLOSOMEBG.jpg",
+        "position": "center center",
+        "title": "What is Cyclosome™ Technology?",
+        "heading_tag": "h2",
+        "text": "<p>Learn about our Cyclosome™ proprietary process</p>",
+        "content_position": "top-left",
+        "color": "#ffffff",
+        "overlay_background": "#000000",
+        "overlay_opacity": 50,
+        "link": "https://hitechpharma.com/pages/cyclosome-technology",
+        "button_text": "LEARN MORE"
+      }
+    },
+    "1493171740659": {
+      "type": "dynamic-blog-posts",
+      "disabled": true,
+      "settings": {
+        "title": "Hi-Tech Insider",
+        "blog": "news",
+        "show_date": true,
+        "show_author": false,
+        "show_excerpt": false
+      }
+    },
+    "dynamic_blog_posts_a3aNUa": {
+      "type": "dynamic-blog-posts",
+      "disabled": true,
+      "settings": {
+        "title": "Weight Loss & Energy",
+        "blog": "weight-loss-energy",
+        "show_date": true,
+        "show_author": true,
+        "show_excerpt": true
+      }
+    },
+    "dynamic_blog_posts_AJiHqN": {
+      "type": "dynamic-blog-posts",
+      "disabled": true,
+      "settings": {
+        "title": "All About Protein",
+        "blog": "protein",
+        "show_date": true,
+        "show_author": false,
+        "show_excerpt": false
+      }
+    }
+  },
+  "order": [
+    "pxs_image_with_text_overlay_cMdLAM",
+    "dynamic_featured_collection_pP8Adq",
+    "dynamic_rich_text_PXwJMg",
+    "dynamic_promo_mosaic_J4zKMX",
+    "dynamic_collection_list_9qAKbp",
+    "dynamic_image_with_text_Ax89KK",
+    "1521054862775",
+    "dynamic_image_with_text_UMfkre",
+    "1643057614281d031f",
+    "1493171740659",
+    "dynamic_blog_posts_a3aNUa",
+    "dynamic_blog_posts_AJiHqN"
+  ]
+}

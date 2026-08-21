@@ -1,0 +1,87 @@
+{% doc %}
+  Renders a heading with inline rich text, a configurable heading level, and text alignment.
+  @example
+  {% content_for 'block', type: 'heading', id: 'heading-1' %}
+{% enddoc %}
+
+{% if block.settings.heading != blank %}
+  <div
+    class="flexible-heading"
+    style="--fc-color-heading: {{ settings.color_headings | default: '#222222' }}; --fc-heading-align: {{ block.settings.alignment }};"
+    {{ block.shopify_attributes }}
+  >
+    <{{ block.settings.tag }} class="flexible-heading__text">{{ block.settings.heading }}</{{ block.settings.tag }}>
+  </div>
+{% endif %}
+
+{% stylesheet %}
+  .flexible-heading {
+    text-align: var(--fc-heading-align);
+  }
+
+  .flexible-heading__text {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: var(--fc-color-heading);
+  }
+
+  .flexible-heading__text a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  @media (min-width: 480px) {
+    .flexible-heading__text {
+      font-size: 26px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .flexible-heading__text {
+      font-size: 30px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .flexible-heading__text {
+      font-size: 34px;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Heading",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "tag",
+      "label": "Heading level",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "text_alignment",
+      "id": "alignment",
+      "label": "Text alignment",
+      "default": "left"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Heading"
+    }
+  ]
+}
+{% endschema %}

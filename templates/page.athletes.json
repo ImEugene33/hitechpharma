@@ -1,0 +1,129 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "settings": {}
+    },
+    "dynamic_image_with_text_HW7daH": {
+      "type": "dynamic-image-with-text",
+      "custom_css": [
+        ".image-with-text__content {background: #158aef;}",
+        ".image-with-text__heading {font-weight: 400; font-size: 42px;}",
+        "@media screen and (min-width: 720px) {.image-with-text--desktop-height-natural .image-with-text__image {height: 100%; } }",
+        "@media (min-width: 1024px) {.image-with-text__heading {font-size: 62px; }}"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "section_heading": "",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "image": "shopify://shop_images/download_31.avif",
+        "video_url": "",
+        "video_autoplay": false,
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "right",
+        "mobile_image_alignment": "top",
+        "heading": "Ashley Kaltwasser",
+        "subheading": "<p><strong>Ashley Kaltwasser is an American IFBB Pro Bikini division competitor. The 5’5” fitness model and record-breaking pentathlete has the most Ms. Olympia Bikini wins in IFBB history. She accomplished this feat by winning back to back to back titles in 2013, 2014 & 2015. As of August 2023, she has won 41 IFBB bikini titles, more than any other competitor in history.</strong><br/><br/></p>",
+        "text_alignment": "right",
+        "button_label": "Button",
+        "button_link": ""
+      }
+    },
+    "dynamic_quote_z68URd": {
+      "type": "dynamic-quote",
+      "custom_css": [
+        ".quote-banner {background-image: url(\"https://cdn.shopify.com/s/files/1/1119/7502/files/dark-bg.png?v=1784895482\"); background-size: cover; background-repeat: no-repeat;}"
+      ],
+      "name": "Quote banner",
+      "settings": {
+        "quote": "<h2>The Best of the Best</h2><p>Ashley's IFBB professional debut was at the 2012 Houston Pro where she placed 5th place and won her first show in the Toronto Pro Supershow Bikini Division in 2013. Later that year at the 2013 Joe Weider's Olympia Fitness Bikini Olympia competition, she defeated the previous year’s winner and went on to make herself the youngest, three-peat champion.</p><p>Ashley joined Team Hi-Tech in the fall of 2016.</p><p><a href=\"https://hitechpharma.com/blogs/news/ashley-kaltwasser-ifbb-champion-hi-tech-pharmaceuticals-athlete\">Learn More About Ashley Kaltwasser</a></p>",
+        "attribution_name": "",
+        "attribution_role": "",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "#ffffff",
+        "attribution_color": "#ffffff"
+      }
+    },
+    "dynamic_image_with_text_qb3E99": {
+      "type": "dynamic-image-with-text",
+      "blocks": {
+        "social_icon_tWCwTd": {
+          "type": "social_icon",
+          "settings": {
+            "icon": "facebook",
+            "link": "https://www.facebook.com/BikiniProAshley/"
+          }
+        },
+        "social_icon_Qz4fTt": {
+          "type": "social_icon",
+          "settings": {
+            "icon": "instagram",
+            "link": "https://www.instagram.com/ashleykfit/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA%3D%3D"
+          }
+        },
+        "social_icon_fiXTha": {
+          "type": "social_icon",
+          "settings": {
+            "icon": "youtube",
+            "link": "https://www.youtube.com/user/AshleyKfit"
+          }
+        },
+        "social_icon_kyddQe": {
+          "type": "social_icon",
+          "settings": {
+            "icon": "twitter",
+            "link": "https://x.com/AshleyKfit"
+          }
+        }
+      },
+      "block_order": [
+        "social_icon_tWCwTd",
+        "social_icon_Qz4fTt",
+        "social_icon_fiXTha",
+        "social_icon_kyddQe"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "section_heading": "",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "image": "shopify://shop_images/AK_2018_11HG_1547.jpg",
+        "video_url": "",
+        "video_autoplay": false,
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "left",
+        "mobile_image_alignment": "top",
+        "heading": "Follow IFBB Pro Ashley Kaltwasser",
+        "subheading": "",
+        "text_alignment": "left",
+        "button_label": "Button",
+        "button_link": ""
+      }
+    }
+  },
+  "order": [
+    "page",
+    "dynamic_image_with_text_HW7daH",
+    "dynamic_quote_z68URd",
+    "dynamic_image_with_text_qb3E99"
+  ]
+}

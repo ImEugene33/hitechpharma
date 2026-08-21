@@ -1,0 +1,451 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "settings": {}
+    },
+    "dynamic_rich_text_RgC9Xi": {
+      "type": "dynamic-rich-text",
+      "name": "Rich text",
+      "settings": {
+        "width": "regular",
+        "title": "Wellness",
+        "text": "",
+        "heading_size": "medium",
+        "text_alignment": "center"
+      }
+    },
+    "dynamic_rich_text_PdXbrq": {
+      "type": "dynamic-rich-text",
+      "custom_css": [
+        "h2{background-color: #0019ff; color: white; padding: 20px 0;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "width": "regular",
+        "title": "Hi-Tech Supplements to Support Immune Health",
+        "text": "",
+        "heading_size": "large",
+        "text_alignment": "center"
+      }
+    },
+    "dynamic_image_text_9nLz3N": {
+      "type": "dynamic-image-text",
+      "custom_css": [
+        ".image-text__media {max-width: 300px; margin-left: auto; margin-right: auto;}"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "image": "shopify://shop_images/download_1.avif",
+        "image_alt": "",
+        "heading": "",
+        "text": ""
+      }
+    },
+    "dynamic_image_with_text_TbTGVV": {
+      "type": "dynamic-image-with-text",
+      "name": "Image with text",
+      "settings": {
+        "section_heading": "",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "padding_top_desktop": 0,
+        "padding_bottom_desktop": 0,
+        "video_url": "https://www.youtube.com/watch?v=KqxdzM_dAmI",
+        "video_autoplay": false,
+        "crop": "center",
+        "desktop_height": "natural",
+        "mobile_height": "natural",
+        "desktop_image_alignment": "left",
+        "mobile_image_alignment": "top",
+        "heading": "",
+        "subheading": "<p>Hi-Tech Pharmaceuticals provides you the highest concentration of deliverable immune health, antioxidants and multivitamins and minerals available today in an easy to digest Cyclosome Technology delivery. Whether in times of viral uncertainty or maintaining your individual health needs, Hi-Tech has developed products that can provide you with the utmost confidence that you are not only getting recommended doses of key ingredients but does so unlike any other. Our proprietary Cyclosome delivery system ensures your body is able to utilize more ingredients in much higher doses to give you the peace of mind that everyone needs today.<br/><br/>Our long line of products are key individual ingredients that through exhaustive research shows an increase in your body’s ability to fight inflammation, oxidation, stress and improve your overall health. Immune response is paramount to a healthy life and these key ingredients can make a significant difference in how we protect ourselves every day.<br/><br/>For more information of Hi-Tech's proprietary<br/>Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>",
+        "text_alignment": "left",
+        "button_label": "PURCHASE HEALTH & WELLNESS PRODUCTS",
+        "button_link": "https://hitechpharma.com/collections/healthcare"
+      }
+    },
+    "dynamic_category_grid_kreWHU": {
+      "type": "dynamic-category-grid",
+      "blocks": {
+        "category_header_w4P6dn": {
+          "type": "category_header",
+          "settings": {
+            "heading": "IMMUNITY",
+            "background_color": "#1300fa",
+            "text_color": "#ffffff",
+            "image_alt": "",
+            "link": ""
+          }
+        },
+        "product_item_eJTBpD": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_3.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/vitamin-c",
+            "title": "VITAMIN C",
+            "text": "<ul><li>Protects Against Immunity Deficiencies</li><li>Improves Overall Health</li><li>One of Natures True Antioxidants</li></ul><p>Research shows that higher blood levels of Vitamin C may be the clearest nutrition marker for overall health and wellness. It has been shown to boost our bodies ability to fight against diseases and attributes to a wealth of overall health benefits. It may not cure the common cold, but it is thought that Vitamin C improves our bodies fight more serious complications when we are fighting the common cold or flu. Adding our Cyclosome Technology to this most basic of life ingredients allows our body to absorb and utilize a tremendously larger dose every day.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_H6ed7Q": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_4.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/black-elderberry",
+            "title": "BLACK ELDERBERRY",
+            "text": "<ul><li>Pre Flu Support and Post Flu Recovery</li><li>Research Linked Immune Support</li><li>Best Combined with Vitamin C and Echinacea</li></ul><p>One of the longest known natural products for immune health and support is the Black Elderberry. More specifically the antioxidant levels and immune system boosting power of the formulary of Sambucol™. Some research shows that not only is there a definitive boost to the immune system, but Black Elderberry helped relieve people suffering from the flu days earlier than by using nothing at all. Early evidence supports the inclusion of elderberry before flu season arrives combined with foods high in Vitamin C, Vitamin B6 and Vitamin E, to help stave off illness or reduce its effects should you become ill.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_GTkYDG": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_5.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/echinacea",
+            "title": "ECHINACEA",
+            "text": "<ul><li>Research Linked Immune Support</li><li>Anti-inflammatory Behavior</li><li>Flavonoids Providing Bacterial and Viral Resistance</li></ul><p>Echinacea has been linked to many health benefits, such as reduced inflammation and improved immunity which lends itself perfectly to the virus and bacterial infection fight. The plant source from which Echinacea is derived is chalk full of compounds called alkamides. This novel compound improves antioxidant activity by renewing depleted antioxidants and helping them better reach molecules that are prone to oxidative stress. Some of these antioxidants are flavonoids, chicoric and rosmarinic acid which further enhance the immune support provided as a whole echinacea. Studies also have linked echinacea and their compounds to health benefits such as anti-inflammatory behavior and improved stability in blood sugar levels.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_kMwWqF": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_6.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/turmeric-95",
+            "title": "TURMERIC 95",
+            "text": "<ul><li>Reduces Inflammatory Processes</li><li>Powerful Antioxidant</li><li>Improved Joint Health</li><li>30x Greater Bioavailability</li><li>Enhanced with Cyclosome™ Delivery Technology</li><li>Improves Brain-Derived Neurotrophic Factors</li></ul><p>Typically, poorly absorbed and with relatively little bioavailability, Turmeric has for centuries been known as a great potential for immune response, exercise and traumatic recovery and overall health. Hi-Tech has now combined the benefits of Turmeric with the increased bioavailability delivery system of Cyclosome to increase absorption by more than 30x greater than has ever been available in the past.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_ReJELh": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_7.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/vitamin-d3",
+            "title": "VITAMIN D3",
+            "text": "<ul><li>Increase Power and Strength</li><li>Helps Increase Bone Density</li><li>Improves Balance of Mood</li><li>Increases Immunity Response</li></ul><p>As more and more people are finding ways to avoid the sun due to increasing chances of skin cancer, our overall levels of Vitamin D3 are lower than ever. Vitamin D3 also known as the “sun vitamin” is produced by our interaction with the sun. The more daylight hours we work indoors, are in school, or inside due to inclement weather, our body misses its chance to make more of this precious vitamin. Now Hi-Tech Pharmaceuticals introduces a two fold problem solver. One by providing 2000iu of Vitamin D3 in every serving and two, by encapsulating it in the patented Cyclosome Delivery ™ system.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_ipDKtk": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_8.avif",
+            "image_alt": "",
+            "link": "",
+            "title": "ZINC LOZENGES",
+            "text": "<ul><li>Helps Support a Healthy Immune System*</li><li>Clinically Proven to Shorten the Duration of the Common Cold by Almost Half*</li><li>25mg per Serving!</li><li>No Fillers or Additives to Reduce Uptake Potential*</li></ul><p>Minerals are important constituents of any healthy diet. But today's farming methods often strip the essential minerals from the soil. This great tasting Zinc lozenge is what you need to add every day to guard against the common cold and flu and protect your health. Naturally occurring Zinc is intended to support the body's natural defense system as well as enhance digestion and metabolism of important vitamins, minerals, carbohydrates and other essential nutrients. In addition, Zinc is also essential for normal fetal and reproductive development and one of the most important antioxidants that provides immune support.<br/><br/>Taking zinc lozenges regularly gives your immune system an invigorating push so you can maintain your health and wellness year round and live uninterrupted from seasonal ailments. Hi-Tech’s Zinc Lozenges® are a must have in this atmosphere of cold and viruses running rampant. Hi-Tech’s Zinc Lozenges® are good tasting orange flavored and preferred by almost everyone who had tried other brands of Zinc lozenges. Try Hi-Tech’s Zinc Lozenges® and help shorten the duration and severity of your cold.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "category_header_qBXXGV": {
+          "type": "category_header",
+          "settings": {
+            "heading": "WELLNESS",
+            "background_color": "#1300fa",
+            "text_color": "#ffffff",
+            "image_alt": "",
+            "link": ""
+          }
+        },
+        "product_item_CcTwqp": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_9.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/milk-thistle",
+            "title": "MILK THISTLE",
+            "text": "<ul><li>Promote Improved Detoxification</li><li>Protect Against Toxins</li><li>Increase Glutathione Production</li></ul><p>The primary active ingredient in milk thistle is Silymarin which is a phytonutrient flavonoid which may provide valuable protection of the liver. During long periods of strenuous anaerobic or aerobic exercise, our livers can become stressed with increased levels of cortisol and other harmful agents that can reduce our ability to recover. By adding Hi-Tech Pharmaceuticals Milk Thistle to your daily regimen, your ability to improve, grow and recover becomes that much easier.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_mfRhdD": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_10.avif",
+            "image_alt": "",
+            "link": "",
+            "title": "ASHWAGANDHA",
+            "text": "<ul><li>Ease Tension, Anxiety, Cortisol Levels and Improve Sleep*</li><li>Promote Enhanced Memory and Cognitive Function*</li><li>Helps Promote Endurance, Strength, Muscle Size and Recovery Rate*</li><li>Enhances Sexual Performance and Testosterone in Men*</li></ul><p>By creating a safer passage through the body, namely the liver, these compounds can now be utilized by the body as they are unchanged by the first phase of the digestive process and can enter the second phase nearly complete. Try Ashwagandha Extract by Hi-Tech Pharmaceuticals and help ease tension, anxiety, cortisol levels and improve sleep. It can also help promote enhanced memory and cognitive function while helping promote endurance, strength, muscle size and recovery rate.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_y68Kwe": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_11.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/melatonin",
+            "title": "MELATONIN",
+            "text": "<ul><li>10mg of Melatonin Per Dose</li><li>3 & 7mg Multi-Stage Melatonin Release</li><li>Cyclosome Ingredient Releasing Technology</li><li>Deeper, More Restful Nighttime Recovery</li></ul><p>The biggest issue with most people who take Melatonin and other sleep aids is the amount of ingested ingredients that are absorbed by the body. Often, the ingredients are broken down high in the GI system and are rendered useless by our digestion. Hi-Tech addresses this issue by utilizing a patented technology called Cyclosome™ which allows the ingested Melatonin to travel further into the gut and to be much more readily absorbed. This allows for a more consistent level each night allowing the body to better self regulate its sleep patterns.<br/><br/>In addition, Hi-Tech Melatonin takes the novel approach of a multi-stage delivery. The first stage is a rapid release of 3mg of Melatonin into the blood stream, allowing a peaceful entrance into the first stage of sleep. That is later followed by the release of 7mg which allows for a deeper sleep to be achieved. About the time that 7mg has been utilized by the body, the sun is rising and it’s time to start the new day. A day began with the most restful night of sleep possible.</p><p>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_nYGhmz": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_12.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/valerian-rx",
+            "title": "VALERIAN-RX",
+            "text": "<ul><li>Inhibits Enzyme-Induced Breakdown of GABA</li><li>Improves Sleep Quality and Duration in Clinical Studies</li><li>Contains Valepotriates Not Found in Other Inferior Products</li><li>Improved Downregulation of the CNS Resulting in Relaxation</li></ul><p>Used for more than 2,000 years by the Greeks for its amazing qualities, Valerian root has been shown to promote sleep, improve quality of sleep in what is described as the feeling of a mild sedative, leading to the feeling of reduced anxiety.<br/></p><p>Hi-Tech has seized the opportunity to utilize a proprietary extract process which increases valerian’s ability to enhance the signaling of GABA, which is one of the main sedative neurotransmitters. GABA slows down nerve cell activity instead of exciting it. Research shows that Valerian extract, specifically Valepotriates, may block an enzyme that destroys GABA, which means that more GABA is available for a longer amount of time. Valerian-Rx™ offers a safe, natural means of relaxation and the ability to get a longer, better night of sleep and awaken rested and recovered.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_exwnkX": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_13.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/ginkgo-biloba",
+            "title": "GINGKO BILOBA",
+            "text": "<ul><li>High Levels of Flavonoids and Terpenoids</li><li>Improved Cognitive Function</li><li>Promotes Blood Circulation in the Brain</li><li>Protects the Brain from Neuronal Damage</li></ul><p>Used in Asian countries for thousands of years, antioxidant-rich herb Ginkgo Biloba is derived from one of the true living fossils in history, of which examples have been found from 280 million years ago. There is a myriad of uses described throughout history, but most notably is the research backed idea of improved blood perfusion to the entire body, but most specifically to the brain. Reductions in anxiety and mental clarity have been described for centuries as well as improving vascular and other associated dementias. Hi-Tech Pharmaceuticals Ginkgo Biloba contains numerous flavonoids which some science suggests can protect against aging-related issues such as dementia by improving blood flow to the brain.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_Wy8mV3": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_14.avif",
+            "image_alt": "",
+            "link": "",
+            "title": "PINE BARK",
+            "text": "<ul><li>Boost Antioxidant Abilities</li><li>Improved Blood Flow for Erectile Dysfunction</li><li>Immune System Support</li><li>Improved Brain Function</li><li>Prevent and Minimize Damage from Free Radicals</li></ul><p>Immune health and maintenance comes in many forms. Hi-Tech Pharmaceuticals brings you several different options, but Pine Bark may be the most efficient and least well known of all. Besides being an excellent source for Vitamin C, Pine Bark possesses numerous phytochemicals that can help support a heathier you. This unique compound contains proanthocyanins, powerful antioxidant compounds that are felt to be more powerful than Vitamin C and E, which can provide wide ranging added health benefits. Among them is improved brain function and has the ability to reduce Cytokines, which are the foundation for inflammation. Research has also shown many promising ideas, most important of which may be that the compounds in Pine Bark were able to reduce the severity and duration of common colds by many days.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_6b33iw": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_15.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/grape-seed",
+            "title": "GRAPE SEED",
+            "text": "<ul><li>Potent Antioxidant Support</li><li>Promotes a Healthy Immune System</li><li>Highly Standardized Vegetarian Friendly</li><li>High Polyphenol Content</li><li>Supports Brain Function as We Age</li></ul><p>Hi-Tech Pharmaceuticals Grape Seed Extract (GSE) is a natural substance rich in antioxidants taken from grape seeds. The foundation for this action is found in its polyphenol and proanthocyanidin complexes that provide your body with a nearly unparalleled support for a healthier and more robust immune system. A growing number of research studies seem to conclude that there are a myriad of benefits derived from Grape Seed Extracts. This new research indicates that the components of GSE may help to support healthy kidney, brain, bone, total body vascularity and other tissues by supporting a healthier, immune system’s ability to counteract oxidative and metabolic stress.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_UNTPWR": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_16.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/resveratrol",
+            "title": "RESVERATROL",
+            "text": "<ul><li>Improved Cellular Anti-Aging Properties</li><li>Provides an Improved Natural Biological Reaction to Stress</li><li>Made from French Wine Grapes</li><li>Supports a Cardiovascular and Environmental Stress Reduction</li></ul><p>Hi-Tech’s latest Cyclosome™ Delivery System addition is a free radical destroying juggernaut in the antioxidant world – Resveratrol. Long thought to be a life extending compound found primarily in the skin of red grapes, this amazing compound protects the grape itself from environmental stress and disease by neutralizing free radicals. Research shows that Resveratrol shares this same action in humans as well when ingested, though red wine has shown to possess roughly 1-2mg Resveratrol per 8oz. Found most abundantly as an extract in red wine due to its fermentation process when compared to white wine. Hi-Tech saw the need to better deliver this novel ingredient and utilize the in-house developed Cyclosome Delivery System to allow for far greater bioavailability.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_9jCnf3": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_17.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/musclevite",
+            "title": "MUSCLEVITE",
+            "text": "<ul><li>Multi Vitamin and Mineral for Daily Use</li><li>Supports Muscle Recovery</li><li>Additional Beta-Alanine for Increased Carnosine Production</li><li>Carnitine to Fuel Carnosine for Energy</li></ul><p>Musclevite™ is the newest addition to the massive range of products for muscle recovery, supports weight loss and overall health in the Hi-Tech lineup. This high potency and high performance multi vitamin and multi-mineral is formulated with the proper amount of essential daily vitamins and the essential recovery ingredients every active person needs. In addition, you’ll find Beta-Alanine and Carnitine to help increase energy in both aerobic and anaerobic environments.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_mfj6PT": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_18.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/co-q10",
+            "title": "Co-Q10",
+            "text": "<p>Though our bodies produce and store CoQ10 naturally, the amount of oxidative stress caused by environmental issues, poor food and lifestyle choices, self-induced stress and more, means we need to supplement more into our diets. CoQ10 is used daily for continued growth and maintenance, but as we age, natural occurring levels of CoQ10 fall and we are less protected from environmental stresses that lead to common heart ailments, compromised immunity and many other issues.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_GRVDdJ": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_19.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/quercetin",
+            "title": "QUERCITIN",
+            "text": "<p>Quercetin is a flavanoid found naturally in a number of foods including apples, onions, teas, berries, and red wine. Quercetin has been shown to encourage a healthy immune response, especially to seasonally changing environments. Quercitin acts as an antioxidant, neutralizing free radicals—the chemical by-products that harm cell membranes and damage DNA. Quercetin possesses significant antihistamine and anti-inflammatory properties. Quercetin's best-known mechanism of action involves its ability to stabilize mast cell membranes, which in turn can decrease the release of histamine. In this way it provides nutritional support for individuals who occasionally suffer from allergies. This bioflavonoid also supports healthy cholesterol levels already within normal range.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_XUPcgw": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_20.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/shilajit-extract",
+            "title": "SHILAJIT EXTRACT",
+            "text": "<p>Shilajit is one of the fastest growing supplements available. It is a monstrously diverse pitch that grows on surfaces of granite rocks in several regions of the world. This pitch contains a who’s-who of the mineral spectrum and functionality factor. Shilajit has been used in traditional Indian Ayurvedic medicine for centuries, and the compounds in it appear to be beneficial for many conditions. Found only in high altitude rock formations, this sticky tar like substance is a byproduct of plant degradation in the wild. Research notes that two of the key compounds in Shilajit – Fulvic and Humic Acids, act both as antioxidant and anti-inflammatory compounds and may help reduce cell wall damage and reduce free-radical formation in the body. These are the primary two key factors in immune health and the overall ageing process.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_LPfQzc": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_21.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/collections/healthcare/products/fish-oil",
+            "title": "FISH OIL",
+            "text": "<p>Fish oil has proven to be a must have for bodybuilders or anyone exercising and looking to improve recovery. Fish oil is rich in Omega 3 Fatty Acids, in particular EPA and DHA. These Omegas have shown the ability to improve recovery times and help the most important part of recovery; improve anti-inflammatory responses. Reducing inflammation is the true key to any recovery in training, whether heavy lifting or long, hard cardio sessions. Combined with a clean eating lifestyle and introducing fish oil to your supplement regime can help improve your pathway to a leaner, more muscular physique.<br/><br/></p>"
+          }
+        },
+        "product_item_mF9GEk": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_22.avif",
+            "image_alt": "",
+            "link": "",
+            "title": "NAC|N-ACETYL CYSTEINE",
+            "text": "<p>N-acetyl Cysteine (or NAC) is a more stable form of the amino acid L-Cysteine. As a precursor to L-Cysteine, NAC helps the body synthesize Glutathione. NAC possesses powerful antioxidant properties that may help fight cell-damaging free radicals. Studies have shown that oxidative stress caused by free radicals may contribute to premature aging of cells. NAC supports healthy liver function and lung function. NAC supports bronchial and respiratory health. In addition, it encourages a healthy immune cell response. All Hi-Tech Pharmaceuticals products are manufactured in accordance with Good Manufacturing Practices (GMP) which are among the highest standards in the world producing guaranteed purity and potency.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_WDWytE": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_23.avif",
+            "image_alt": "",
+            "link": "",
+            "title": "BERBERINE",
+            "text": "<p>Hi-Tech has been at the forefront of Berberine research with its Nexrutine® product. Hi-Tech's next generation Nexrutine® XS Berberine Pharmacokinetic study showed improved berberine bioavailability (AUC) by over 10 times on molar basis and with observed dose linearity. Our product increased retention time from about 30-45 minutes to over 10 hours! The uniqueness of Nexrutine® XS Berberine derives directly from one of berberine’s main limits: bioavailability. The raw extract has extremely poor oral bioavailability and bioabsorption profile. Nexrutine® XS Berberine groundbreaking supplement harnesses the power of berberine to provide a natural and effective solution for blood sugar metabolism support and healthy weight management.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_UFgVxJ": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_24.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/products/beta-sitosterol",
+            "title": "BETA-SITOSTEROL",
+            "text": "<p>Beta Sitosterol works in the body to help provide cardiovascular conditioning in men and women as well as prostate health and support via maintenance of already healthy cholesterol levels. With the presence of more than 40 different beta phytosterols, Hi-Tech’s Beta Sitosterol provides the 4 primary versions – Beta Sitostanol, Campsterol, Stigmasterol and Beta Sitosterol. These 4 key sterols provide the primary workload of healthy cardiovascular system in trained and untrained adults. If you are looking for the most powerful Beta Sitosterol pine phytosterol complex, Hi-Tech also utilizes the proprietary Cyclosome Technology. Using this process increases absorption of Beta Sitosterol upwards of 70% making it the most potent product on the market!<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_LbaMFe": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_25.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/products/fadogia-agrestis-20-1-extract",
+            "title": "FADOGIA AGRESTIS 20:1 EXTRACT",
+            "text": "<p>Fadogia Agrestis 20:1 (as FadogiaPure•) is the most potent Fadogia extract on the market. Fadogia has been shown to increase levels of testosterone in blood with 5 days of oral administration! Fadogia Agrestis increases total and free testosterone levels, as well as helping athletes recover from strenuous exercise. Studies suggest that it boosts testosterone and acts as a libido enhancer. In recent years Fadogia has become popular as a supplement for supporting Testosterone levels in men, where it works by mimicking the luteinizing hormones which the body uses as a signal to produce more Testosterone. In addition, Fadogia Agrestis is often used by athletes to improve performance. FadogiaPure• also works by decreasing the amount of sex-hormone binding globulin (SHBG) in the blood. SHBG is a type of protein that binds to sex hormones, predominantly testosterone and estrogen. When SHBG is bound to these proteins they cannot enter the cell and exert their effects. Hi-Tech's FadogiaPure• 20:1 extract contains many other beneficial compounds which help with this effect such as saponins, anthraquinones, flavonoids, and alkylamide glycosides that are not found in many other fadogia products. †<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_i9VN4U": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_26.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/products/maca",
+            "title": "MACA",
+            "text": "<p>While being a terrific source for most essential electrolytes, Maca contains two unique compounds thought to be primarily responsible for its amazing effects: Macamides and Macaenes. These compounds are the basis for MacaPure®. In particular is Black Maca which has been shown to increase energy, libido and sex drive while helping balance mood swings and hormone balance. Hi-tech has combined these amazing compounds in our Cyclosome Technology to ensure massively improved bioavailability and efficacy.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_4Ttttt": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_27.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/products/tongkat-ali-100-1-extract",
+            "title": "TONGKAT ALI 100:1 EXTRACT",
+            "text": "<p>Tongkat Ali, Also known as Longjack, has been shown to support male hormonal balance (including testosterone availability), libido and performance, according to studies. A study evaluating the testosterone promoting benefits of Tongkat Ali also discovered higher levels of energy and physical strength among athletes taking a Tonkat Ali supplement compared to those not taking the supplement. Our Cyclosome® Tablets feature a super-potent 100:1 root extract to increase testosterone levels and give you love life an invigorating boost. The bioactive Quassinoids in TongKat Ali benefits, including promoting healthy testosterone levels are concentrated 100 times in Hi-Tech's product! Modern science has allowed us to create highly potent Tongkat Ali extracts like our 100:1 Tongkat Ali extract, which means the 400mg of 100:1 concentration Tongkat Ali would require 400 grams of dried roots to achieve the same benefits! We believe the 100:1 potency coupled with the Cyclosome® delivery makes our Tongkat Ali extract the most potent product on the market!<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_AiyzUT": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_28.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/products/collagen-peptides",
+            "title": "COLLAGEN PEPTIDES",
+            "text": "<p>Hi-Tech Pharmaceuticals utilizes 20 grams of the highest-quality grass-fed, Type I and Type Ill collagen which makes up 90 percent of all the collagen in your body and is critical for maintaining the youthful function and appearance of the skin, hair, nails, lean muscle metabolism, smooth digestion and so much more. Hi-Tech utilizes SOLUGEL®, which is composed of high-quality collagen peptides. SOLUGEL® is an instantized and advanced hydrolyzed collagen peptide formula, Hi-Tech's premium collagen powder allows for maximum absorption and potency. This means it can be broken down, converted, and absorbed back into the body to rebuild joint strength, fill in fine lines and promote graceful aging much more effectively than non-hydrolyzed collagen brands.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_XPwtyi": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_29.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/products/apple-cider-vinegar",
+            "title": "APPLE CIDER VINEGAR",
+            "text": "<p>Found in large quantities in Apple Cider Vinegar (ACV), Acetic acid is a short-chain fatty acid that separates into acetate and hydrogen in your body. Research suggests that acetic acid in specifically in Apple Cider Vinegar has powerful health benefits all highlighted within the digestive system. In unfiltered ACV also contains a substance called the Mother. While the mother contains no appreciable amounts of vitamins or minerals, it consists of proteins, enzymes and friendly bacteria that are the primary factors in aiding in digestion. In addition, ACV contains antioxidants as well that support an improved health benefit in todays complicated nutritional intake.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "product_item_ndeC6b": {
+          "type": "product_item",
+          "settings": {
+            "image": "shopify://shop_images/download_30.avif",
+            "image_alt": "",
+            "link": "https://hitechpharma.com/products/glutathione",
+            "title": "L-GLUTATHIONE REDUCED",
+            "text": "<p>Glutathione plays an important role in supporting overall wellness and normal cellular function. It is involved in:</p><ul><li>Supporting the body’s natural antioxidant defenses</li><li>Supporting healthy immune system function</li><li>Supporting normal detoxification pathways</li><li>Helping maintain cellular health</li></ul><p>Because glutathione is involved in many biological processes, maintaining healthy levels is important for overall wellness. In fact, glutathione is present in cells at levels comparable to other essential compounds such as glucose, potassium, and cholesterol—highlighting its importance in normal cellular function.<br/><br/>For more information of Hi-Tech's proprietary Cyclosome Technology - visit<br/><a href=\"http://cyclosometechnology.com/\" target=\"_blank\">http://cyclosometechnology.com/</a></p>"
+          }
+        },
+        "category_header_9Ge3KD": {
+          "type": "category_header",
+          "settings": {
+            "heading": "From the CDC - Additional Steps to Protect Yourself",
+            "background_color": "#1300fa",
+            "text_color": "#ffffff",
+            "image_alt": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_header_w4P6dn",
+        "product_item_eJTBpD",
+        "product_item_H6ed7Q",
+        "product_item_GTkYDG",
+        "product_item_kMwWqF",
+        "product_item_ReJELh",
+        "product_item_ipDKtk",
+        "category_header_qBXXGV",
+        "product_item_CcTwqp",
+        "product_item_mfRhdD",
+        "product_item_y68Kwe",
+        "product_item_nYGhmz",
+        "product_item_exwnkX",
+        "product_item_Wy8mV3",
+        "product_item_6b33iw",
+        "product_item_UNTPWR",
+        "product_item_9jCnf3",
+        "product_item_mfj6PT",
+        "product_item_GRVDdJ",
+        "product_item_XUPcgw",
+        "product_item_LPfQzc",
+        "product_item_mF9GEk",
+        "product_item_WDWytE",
+        "product_item_UFgVxJ",
+        "product_item_LbaMFe",
+        "product_item_i9VN4U",
+        "product_item_4Ttttt",
+        "product_item_AiyzUT",
+        "product_item_XPwtyi",
+        "product_item_ndeC6b",
+        "category_header_9Ge3KD"
+      ],
+      "name": "Category grid",
+      "settings": {
+        "columns_desktop": "3"
+      }
+    },
+    "dynamic_rich_text_iMnTpU": {
+      "type": "dynamic-rich-text",
+      "name": "Rich text",
+      "settings": {
+        "width": "regular",
+        "title": "",
+        "text": "<h2>Clean your hands often</h2><ul><li><strong>Wash your hands</strong> often with soap and water for at least 20 seconds especially after you have been in a public place, or after blowing your nose, coughing, or sneezing.</li><li>If soap and water are not readily available, <strong>use a hand sanitizer that contains at least 60% alcohol</strong>. Cover all surfaces of your hands and rub them together until they feel dry.</li><li><strong>Avoid touching</strong> <strong>your eyes, nose, and mouth</strong> with unwashed hands.</li></ul><h2>Avoid close contact</h2><ul><li><strong>Avoid close contact</strong> with people who are sick</li><li>Put <strong>distance between yourself and other</strong> <strong>people</strong> if COVID-19 is spreading in your community. This is especially important for <a href=\"https://www.cdc.gov/coronavirus/2019-ncov/specific-groups/high-risk-complications.html\">people who are at higher risk of getting very sick</a>.</li></ul>",
+        "heading_size": "medium",
+        "text_alignment": "left"
+      }
+    }
+  },
+  "order": [
+    "page",
+    "dynamic_rich_text_RgC9Xi",
+    "dynamic_rich_text_PdXbrq",
+    "dynamic_image_text_9nLz3N",
+    "dynamic_image_with_text_TbTGVV",
+    "dynamic_category_grid_kreWHU",
+    "dynamic_rich_text_iMnTpU"
+  ]
+}

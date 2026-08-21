@@ -1,0 +1,391 @@
+{% comment %}
+  Category grid: two block types.
+    - category_header: full-bleed colored bar with a heading (e.g. "IMMUNITY").
+    - product_item: image + title + rich text, laid out in a responsive grid.
+
+  Blocks render in order. Each category_header closes any open grid and
+  starts a new one, so a single section instance can hold one category
+  (header + items) or several stacked categories, one after another.
+{% endcomment %}
+
+{% style %}
+  #shopify-section-{{ section.id }} .category-grid {
+    --cg-color-heading: {{ settings.color_headings | default: '#222222' }};
+    --cg-color-text: {{ settings.color_text | default: '#4d4d4d' }};
+    --cg-color-accent: {{ settings.color_links | default: '#195be3' }};
+    --cg-columns-desktop: {{ section.settings.columns_desktop | default: 3 }};
+    --cg-space-1: 8px;
+    --cg-space-2: 16px;
+    --cg-space-3: 24px;
+    --cg-space-4: 32px;
+    --cg-space-5: 48px;
+    --cg-space-6: 64px;
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__header {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background: var(--cg-header-bg, #1300fa);
+    color: var(--cg-header-color, #ffffff);
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__header-media {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    line-height: 0;
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__header-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__header-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: var(--cg-space-3) 16px;
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__header-link {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__header-link:focus-visible {
+    outline: 2px solid var(--cg-header-color, #ffffff);
+    outline-offset: -4px;
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__heading {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+    color: inherit;
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__container {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: var(--cg-space-5) 16px;
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--cg-space-5);
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__item-media {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 var(--cg-space-3);
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__item-image-link {
+    display: block;
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__item-image-link:focus-visible {
+    outline: 2px solid var(--cg-color-accent);
+    outline-offset: 2px;
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__item-image {
+    width: auto;
+    height: 95px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__item-title {
+    margin: 0 0 var(--cg-space-2);
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--cg-color-heading);
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__item-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--cg-color-text);
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__item-content > *:first-child {
+    margin-top: 0;
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__item-content > *:last-child {
+    margin-bottom: 0;
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__item-content ul {
+    margin: 0 0 var(--cg-space-2);
+    padding-left: 20px;
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__item-content li + li {
+    margin-top: var(--cg-space-1);
+  }
+
+  #shopify-section-{{ section.id }} .category-grid__item-content a {
+    color: var(--cg-color-accent);
+  }
+
+  @media (min-width: 480px) {
+    #shopify-section-{{ section.id }} .category-grid__heading {
+      font-size: 26px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    #shopify-section-{{ section.id }} .category-grid__header-inner {
+      padding: var(--cg-space-4) var(--cg-space-2);
+    }
+
+    #shopify-section-{{ section.id }} .category-grid__heading {
+      font-size: 30px;
+    }
+
+    #shopify-section-{{ section.id }} .category-grid__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--cg-space-4) var(--cg-space-5);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #shopify-section-{{ section.id }} .category-grid__heading {
+      font-size: 36px;
+    }
+
+    #shopify-section-{{ section.id }} .category-grid__grid {
+      grid-template-columns: repeat(var(--cg-columns-desktop), 1fr);
+      gap: var(--cg-space-5) var(--cg-space-6);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #shopify-section-{{ section.id }} * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+{% endstyle %}
+
+<section class="category-grid" {{ section.shopify_attributes }}>
+  {%- assign grid_open = false -%}
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'category_header' -%}
+        {%- if grid_open -%}
+          </div></div>
+          {%- assign grid_open = false -%}
+        {%- endif -%}
+        <div
+          class="category-grid__header"
+          style="--cg-header-bg: {{ block.settings.background_color | default: '#1300fa' }}; --cg-header-color: {{ block.settings.text_color | default: '#ffffff' }};"
+          {{ block.shopify_attributes }}
+        >
+          {%- if block.settings.image != blank -%}
+            <div class="category-grid__header-media">
+              <img
+                src="{{ block.settings.image | image_url: width: 1600 }}"
+                srcset="
+                  {{ block.settings.image | image_url: width: 600 }} 600w,
+                  {{ block.settings.image | image_url: width: 900 }} 900w,
+                  {{ block.settings.image | image_url: width: 1200 }} 1200w,
+                  {{ block.settings.image | image_url: width: 1600 }} 1600w,
+                  {{ block.settings.image | image_url: width: 2000 }} 2000w
+                "
+                sizes="100vw"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
+                alt="{{ block.settings.image_alt | default: block.settings.image.alt | escape }}"
+                loading="lazy"
+                class="category-grid__header-image"
+              >
+            </div>
+          {%- endif -%}
+
+          <div class="category-grid__header-inner">
+            {%- if block.settings.heading != blank -%}
+              <h2 class="category-grid__heading">{{ block.settings.heading }}</h2>
+            {%- endif -%}
+          </div>
+
+          {%- if block.settings.link != blank -%}
+            <a
+              href="{{ block.settings.link }}"
+              class="category-grid__header-link"
+              aria-label="{{ block.settings.heading | default: 'Category' | escape }}"
+            ></a>
+          {%- endif -%}
+        </div>
+
+      {%- when 'product_item' -%}
+        {%- unless grid_open -%}
+          <div class="category-grid__container"><div class="category-grid__grid">
+          {%- assign grid_open = true -%}
+        {%- endunless -%}
+        <div class="category-grid__item" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            <div class="category-grid__item-media">
+              {%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}" class="category-grid__item-image-link">{%- endif -%}
+              <img
+                src="{{ block.settings.image | image_url: width: 400 }}"
+                srcset="
+                  {{ block.settings.image | image_url: width: 200 }} 200w,
+                  {{ block.settings.image | image_url: width: 400 }} 400w,
+                  {{ block.settings.image | image_url: width: 600 }} 600w
+                "
+                sizes="200px"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
+                alt="{{ block.settings.image_alt | default: block.settings.image.alt | escape }}"
+                loading="lazy"
+                class="category-grid__item-image"
+              >
+              {%- if block.settings.link != blank -%}</a>{%- endif -%}
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.title != blank -%}
+            <h3 class="category-grid__item-title">{{ block.settings.title }}</h3>
+          {%- endif -%}
+
+          {%- if block.settings.text != blank -%}
+            <div class="category-grid__item-content rte">
+              {{ block.settings.text }}
+            </div>
+          {%- endif -%}
+        </div>
+    {%- endcase -%}
+  {%- endfor -%}
+  {%- if grid_open -%}
+    </div></div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Category grid",
+  "class": "category-grid--section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "columns_desktop",
+      "label": "Columns on desktop",
+      "options": [
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" }
+      ],
+      "default": "3"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_header",
+      "name": "Category header",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "IMMUNITY"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background color",
+          "default": "#1300fa",
+          "info": "Shown while the image loads, and as a fallback when no image is set."
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background image"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "Image alt text",
+          "info": "Leave blank to use the image's own alt text."
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link",
+          "info": "Optional. Makes the whole bar, including the image, clickable."
+        }
+      ]
+    },
+    {
+      "type": "product_item",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "Image alt text",
+          "info": "Leave blank to use the image's own alt text."
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Image link",
+          "info": "Optional. Makes the image clickable."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Product name"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<ul><li>Benefit one</li><li>Benefit two</li><li>Benefit three</li></ul><p>Add a short description here.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category grid",
+      "category": "Product",
+      "blocks": [
+        { "type": "category_header" },
+        { "type": "product_item" },
+        { "type": "product_item" },
+        { "type": "product_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}

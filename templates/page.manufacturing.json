@@ -1,0 +1,168 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "settings": {}
+    },
+    "dynamic_flexible_content_xLMR98": {
+      "type": "dynamic-flexible-content",
+      "blocks": {
+        "image_9PAfca": {
+          "type": "image",
+          "name": "Image",
+          "settings": {
+            "image": "shopify://shop_images/blending2_433264ab-39ba-44f7-a0af-7fda70894930.jpg",
+            "alt": "",
+            "width": 60
+          },
+          "blocks": {}
+        },
+        "text_d7YCkE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Compare, Ingredient for Ingredient, Hi-Tech Pharmaceuticals, Inc. manufactures products that are one better than the competition! Why not allow us to custom manufacture and/or private label and package your products? We can satisfy almost any request, whether in tablet, capsule, powder, or liquid form.</p><p>With the GMP’s right around the corner, why not start getting into compliance now? Hi-Tech is a dynamic pharmaceutical company that is ready to help get you where you need to be. Hi-Tech has a cGMP facility that will keep you up to date on all new regulatory hurdles your company faces.</p><p>Feel confident that all products produced by Hi-Tech will be to your exact specifications! Increase your quality and decrease you cost! Yes- that’s right- you will save money by avoiding the middle man and buying directly from Hi-Tech. We import all our own raw material, which dramatically decreases your cost. We also do not add overhead to our bid on your product as we let our brand of products absorb those costs. We are not your typical manufacturer. Reveal to us your wildest dreams and we will help make them a reality! We welcome any challenge, and we guarantee our lead times are the shortest in the industry (72 hours-1 week typically)!</p><p>Hi-Tech has impressive capabilities to private label your company’s products. On an annual basis, Hi-Tech can manufacture 22 billion tablets on our (25) tablet presses and 6 billion capsules on our (13) encapsulators. Hi-Tech can also package 500 million bottles, 250 million cans, 250 million blister packs, and 100 million pacquettes. We also maintain several million dollars worth of inventory of more than 1,000 different raw materials, ensuring quick “turn times” for our customers. Our quality control is rigorous. Incoming raw materials are subject to as many as 20 tests for purity and potency. Satisfaction is guaranteed by our “In Process Quality Control,” which ensures compliance with product specification throughout each stage of manufacturing. This means dealing with us enables you to feel more confident that you are buying only the highest quality products available.</p><h3>OVERVIEW</h3><p>Hi-Tech Pharmaceuticals established a new state-of-the-art facility in Atlanta,Georgia with a single goal in mind --- to meet the ever-changing needs of our customers in a continually changing business environment. Hi-Tech Pharmaceuticals offers the flexibility to provide manufacturing services for tablet, capsule, and powder form products as well as high capacity granulation, milling and blending processes for nutritional and dietary supplements.</p><p>Hi-Tech Pharmaceuticals makes available many value added services and prides itself on a strong commitment to:</p><ul><li>Meeting the lead-times for product delivery.</li><li>Highly competitive cost structure.</li><li>Direct procurement of raw materials to ensure control of quality, cost, and reduced lead-times.</li><li>Technical Support – R&D Resources to assist in the development of new formulations and to provide the highest quality products available.</li><li>Adhere to strict GMP quality standards for nutritional supplements.</li></ul><p>Hi-Tech Pharmaceuticals is expanding rapidly to accommodate the continued growth of our customers. Through the use of innovative manufacturing techniques and supported by analytical verification we ensure the integrity of every product manufactured for our customers.</p>",
+            "alignment": "left"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "image_9PAfca",
+        "text_d7YCkE"
+      ],
+      "name": "Flexible content",
+      "settings": {
+        "background_color": ""
+      }
+    },
+    "dynamic_tabs_content_6dRQgp": {
+      "type": "dynamic-tabs-content",
+      "blocks": {
+        "tab_mwfERb": {
+          "type": "tab",
+          "settings": {
+            "label": "R&D",
+            "image": "shopify://shop_images/download_32.avif",
+            "image_alt": "",
+            "heading": "RESEARCH & DEVELOPMENT",
+            "text": "<p>Hi-Tech Pharmaceuticals offers an in-house Research and Development Lab, which is dedicated to working with our customers to help create formulations that meet or exceed their product specifications. Our R&D Lab allows us to develop formulations using laboratory size equipment and then scale up to production size batches formulating on a lab and pilot scale prior to processing a production batch. This ensures that production runs will be successful and minimizes loss of material during the development stage. We can offer our customers help in both developing new products and formulations as well as solving existing problems. Assisting customers in developing exacting specifications that can be reproduced in a manufacturing environment is of primary importance to our R&D effort.<br/><br/></p>",
+            "image_2_alt": ""
+          }
+        },
+        "tab_Tr4qpc": {
+          "type": "tab",
+          "settings": {
+            "label": "GRANULATION",
+            "image": "shopify://shop_images/download_33.avif",
+            "image_alt": "",
+            "heading": "GRANULATION",
+            "text": "<p><strong>Granulation - Fluid Bed</strong></p><p>Our large capacity fluid bed dryers are used to produce a wide range of granulated materials. Liquids are introduced into the chamber with a spray system while the product is being moved by heated air to create the granulation. When the product has been dried to the required moisture level it is milled and screened to collect the desired mesh size. What are fluid bed dryers? Fluid bed dryers are designed to dry powder particles, where the residual moisture content is higher than what is wanted in the final powder. Hot drying air is distributed through specially designed perforated plates, on which the powder particles/agglomerates are resting.<br/><br/><strong>Granulation - Fluid Chilsonation</strong></p><p>The velocity of the drying air makes the powder ‘fluidize’, i.e. the particles get airborne; however, to the extent that only the finest/smallest particles leave the fluid bed with the air, while the bigger particles/agglomerates are conveyed/transported with the upward and forward directed flow of air (due to the perforation technique of the plate) into the subsequent section. Here cold and/or dehumidified air is introduced to cool the powder to the wanted temperature. Fluid bed drying is suited for powders, granules, agglomerates and pellets with an average particle size between 50 microns and 5 mm.</p><p>Hi-Tech offers Chilsonation systems that are used to create granulated products when no liquid can be added to the raw material. Raw material is passed between high-pressure rollers to form a sheet of material that is processed through a Fitzpatrick Mill that grinds the product into a granular form. The ground material is then screened to collect the desired mesh size.</p><p><strong>Dry Granulation Capabilities</strong></p><p>Hi-Tech Pharmaceuticals has 2 processing rooms for dry granulation, both of which are dedicated to food and nutritional products. Each independent room has its own air, water, ventilation, and dust collection system to reduce the possibilities of cross contamination. Hi-Tech has one Fitzpatrick L-89 chilsonator and one L-83 chilsonator. All equipment has stainless steel contact parts. We have extensive experience dry granulating various sports supplements,weight loss ingredients,antioxidants, specialty chemicals, herbal extracts, calcium/magnesium carbonate, and hydroscopic or low-melting point ingredients.<br/><br/><strong>Why Dry Granulation?</strong></p><p><em>To create a desired particle size.</em> Through dry granulation, you can take a powder, increase the particle size, and control the distribution of the particle size.</p><p><em>For blending similar products.</em> Often times, our customers need to blend different materials that vary in particle size. By matching particle sizes, they can achieve a uniform blend.</p><p><em>To improve product flow.</em> Powders tend to tunnel and cake. A granular product allows your product to flow freely through your production process.</p><p><em>To increase/decrease bulk density.</em> By controlling the bulk density, you can control the flow and metering ability of a product.</p><p><em>To control particle hardness.</em> Particle hardness can affect the dissolution and dispersion rates of a product. Also, the hardness of a particle helps to limit the disintegration of the product. By varying the pressure of the rolls in the chilsonator, we can improve the performance of a product.</p><p><em>To reduce dust.</em> A dusty work environment is not only a nuisance but can pose a serious health and explosion risk. A granular product significantly reduces dusting.</p><p><em>Cost.</em> Dry granulation is a much cheaper process than wet granulation.</p>",
+            "image_2": "shopify://shop_images/download_34.avif",
+            "image_2_alt": ""
+          }
+        },
+        "tab_mP9kCn": {
+          "type": "tab",
+          "settings": {
+            "label": "MIXING",
+            "image_alt": "",
+            "heading": "MIXING",
+            "text": "<p>Hi-Tech Pharmaceuticals has several style mixers to accommodate custom blending requirements. The variety of mixers available allow Hi-Tech the flexibility to process high and low capacity batch sizes. All material is passed through a screen as it is loaded into the blender to ensure that no foreign material or objects are introduced to the mixture. All weighing is verified in accordance with our quality control procedure to ensure that the proper amount of each raw material is added to the blend. Hi-Tech ultilizes a novel auger/screw blender, which reduces your standard deviation to within a fraction of a percent. As a result, you can expect the most uniformed and thorough blending throughout Hi-Tech's wide range of capacities and features.</p><p>Regardless of whether you wish to slowly tumble a delicate product or rapid-mix a viscous one, our engineers will choose the right solution that best fits your specific formula and production requirements. Our blenders are all USDA/FDA Approved and have Capacities of 50-Pounds to 5,000-Pounds. Hi-Tech employs several agitation options: Paddle, Ribbon, or Auger Screw to best suit your needs!Hi-Tech has extensive experience with agglomeration and blending. We offer large scale blending, particle sizing, instantizing, agglomerating and fluid bed drying of nearly any type of food ingredient. We also offer pH modification, fat incorporation, and wet ingredient blending with dry powders.We operate a rigorous HACCP program and take great care with sanitation and storage procedures.</p>",
+            "image_2": "shopify://shop_images/combined.png",
+            "image_2_alt": ""
+          }
+        },
+        "tab_fiBhBz": {
+          "type": "tab",
+          "settings": {
+            "label": "TABLETING",
+            "image_alt": "",
+            "heading": "TABLETING",
+            "text": "<p>Hi-Tech Pharmaceuticals has a variety of tablet presses with both B and D tooling to offer a wide range of shapes and sizes to our customers. Types of tablets that we can offer include chewable, coated, enteric, slow release, bi-layer and sublingual. In accordance with our quality control procedures, all tablet production is carefully monitored to ensure that correct size, weight, hardness, friability and dissolution are maintained through each individual production batch manufactured. Hi-Tech's Tablet Manufacturing is second to none in the dietary supplement industry. Hi-Tech versatility allows our customers to tailor the specifications to suit their strengths. Our wide variety of capabilities in tablet manufacturing as well as tablet packaging have allowed for quicker turnover time and both large & small volume runs.</p><p><strong>Compression capabilities: 22 Billion Tablets Annually</strong></p><p>Hi-Tech has (25) tablet presses and (12) tablet compression work rooms. The most utilized presses are our (6) Stokes 35 station presses and our (6) Manesty 16 station beta presses which account for 6 of the total workstations. The workhorse tablet presses run constantly and will compress most any dietary supplement.All our work station presses were purchased from major pharmaceutical companies and produce precise and consistent tablets. Offering both B and D tooling.</p><ul><li>(6) Stokes BB2 35 station presses which will run 192,000 tablets per hour each bought from J&J</li><li>(6) Manesty 16 station Beta Presses which will run 90,000 tablets per hour each bought from Teva and Watson</li><li>(1) Manesty Elite 800 75 station press which will run 800,000 tablets per hour bought from Pfizer in Brookly,NY</li><li>(1) Kilian Rx 55 which will run 520,000 tablets per hour bought from Merck</li><li>(1) Manesty 39 station Triple layer press bought from Eli Lilly</li><li>(2) Manesty Unipress 27 station press bought from Teva that will produce 250,000 tablets per hour each</li><li>(1) Manesty Unipress 20 station press(D tooling) we bought from Teva that will produce 150,000 tablets per hour</li><li>(2) Stokes 328 tablet presses(D tooling) bought from Pfizer that will produce 150,000 tablets per hour each</li><li>(2) Stokes 551 tablet presses bought from Watson which produce 250,000 tablets per hour each</li><li>(1) Stokes 23 station DD2 20 ton \"Slugger\" that will make up to a 10 gram tablet</li><li>(1) Manesty Drycota tablet press that will compress one small pill inside a second larger tablet</li><li>(1) Kilian RUD 20 D tooling press that was bought from Merck and will produce 150,000 tablets per hour</li></ul><p><strong>Bi-Layer Tableting</strong></p><p>Hi-Tech Pharmaceuticals has expanded on the range of tablet form manufacturing services available by now offering Bi-Layer Tablet Form technology. Bi-Layer Tablet technology offers a variety of applications including Extended Release and Immediate Release delivery systems for greater consumer benefits. Ideal for formulations that contain ingredients which may go into dissolution too quickly to receive the adequate dosage for optimum benefit, Extended Release assists in providing delivery of the active ingredient over an extended period of time. For formulations which contain active ingredients that are more effective when delivered quickly, Immediate Release assists in providing delivery of the active ingredient with an immediate release to dissolution for faster benefits. Hi-Tech even has one Manesty triple layer press that will compress 3 layers into one tablet!</p>",
+            "image_2_alt": ""
+          }
+        },
+        "tab_UbtWME": {
+          "type": "tab",
+          "settings": {
+            "label": "ENCAPSULATION",
+            "image_alt": "",
+            "heading": "ENCAPSULATION",
+            "text": "<p>Hi-Tech Pharmaceuticals facility is equipped with high-speed automatic and semi-automatic encapsulating machines with capabilities to produce two-piece hard shell gelatin,liquid capsules, and vegetarian capsules in sizes including 0, 00, and 1-4 sizes. The fully automatic machines can produce at a high rate of production per hour to offer a high yield capacity per shift. Our semi-automatic encapsulating machines offer additional flexibility to manufacture large or small batch sizes based on the product needs of our customers</p><p><strong>Annual capsule Capacity 6 Billion capsules</strong></p><p>(3) MG2 37N capsule fillers that will run 100,000 per hour each- Bought this year from Watson and King Pharmaceuticals</p><p>(4) Bosch/Index 1500 capsule fillers that will run 90,000 per hour each-3 bought this month from Pfizer Brooklyn and 1 last month fro Teva</p><p>(1) Bosch 1200 capsule filler that will run 72,000 per hour each bought 3 months ago from Teva</p><p>(1) MG2 60 capsule filler that will run 60,000 per hour bought 3 months ago from King Pharmaceuticals</p><p>(4) Zanasi 40 capsule fillers run 40,000/hour each. Hi-Tech also has one Zanasi that has a liquid filling head to do liquid capsules.</p><p>*Hi-tech has multiple sets of change parts for 00,0,1,2,3,and size 4 capsules. This enables Hi-tech to knock most jobs out in less than a week. Each encapsulor also has its own capsule polisher so the capsules come out real shiny. Most manufacturers do not bother to polish the capsules after they run them, which leaves them dusty and will ultimately cause the bottle to show dust as the capsule rub against the bottle. We also have 2 Mocon Vericap 2500 capsule check weighers we just got out of Pfizer Brooklyn that allows us to set our tolerances for example +/- 3% and if the capsule did not meet the correct fill weight it will eject the capsule at 2500 capsules per minute. Very few nutritional companies buys these machines as they are really expensive, but for GMP compliance- Hi-Tech felt we needed exact precision on capsules as they fluctuate more than tablets during a run.</p>",
+            "image_2_alt": ""
+          }
+        },
+        "tab_Xt7BcC": {
+          "type": "tab",
+          "settings": {
+            "label": "POWDERS",
+            "image_alt": "",
+            "heading": "POWDERS",
+            "text": "<p>Hi-Tech Pharmaceuticals is a one-stop-shop providing a full-range of services from concept, research and development, manufacturing, blending, instantizing, and packaging in a wide variety of formats including pouches, jars, stick packs and pails. Hi-Tech also manufactures dairy and vegetable proteins, nutritional powders, and sports supplements. Its customers include makers of the nations top-selling branded food and beverage products.</p><p><strong>Granulation - Fluid Chilsonation</strong></p><p>All raw materials are blended in stainless steel mixers and manufactured under rigid quality control standards to provide a homogeneous blend and a high degree of product uniformity. The variety of blending equipment at Hi-Tech Pharmaceuticals accommodates small and large batch sizes for optimum efficiency.We have two high speed lines that will accomodate almost any size container.When it comes to nutritional powders, the sky’s the limit. With the ability to formulate custom blends, we’ll help you find your niche in the growing market for nutritional powders and products.</p><p>Our unique and flexible development and processing capabilities offer limitless options for products designed to meet a wide array of specialized needs including general health and sports nutrition. Our technical staff work with you to improve current formulas or help you develop your own private label line or great tasting products. Hi-Tech works confidentially with customers around the world to produce a diverse collection of nutritional products from simple protein beverages to more complex meal replacements and sports nutrition products. From development, manufacturing and testing to packaging, Hi-Tech has the experience to provide a turn-key solution for your retail product launch.</p><ul><li>RTD Nutritional Beverages</li><li>Meal Replacements</li><li>Sports Nutrition</li><li>Dietary Supplements</li><li>Weight-loss Aids</li><li>Powdered protein supplements</li><li>Custom Formulations</li></ul>",
+            "image_2_alt": ""
+          }
+        },
+        "tab_kicABU": {
+          "type": "tab",
+          "settings": {
+            "label": "AGGLOMERATION",
+            "image_alt": "",
+            "heading": "AGGLOMERATION",
+            "text": "<p><strong>Fluid Bed Agglomeration</strong></p><p>Hi-Tech Pharmaceuticals has been on the forefront of Fluid Bed Agglomeration in Dietary Supplement and Nutraceutical manufacturing for over 15 years. Agglomeration is a \"Hi-Tech\" approach to making clumpy, nondissolving materials change through agglomeration into instant dispersing uniform material without chemically changing them or adding to the ingredient. With the addition of our latest unit at our Agglomeration Center, Hi-Tech has a total annual capacity of over 2 million Kilograms of throughput. Because of the type of equipment we have, we can process everything from single ingredient products to complex flavored finished blends. If your powdered ingredient or product would benefit from better dissolution and uniform capacity, then Hi-Tech's agglomeration know-how may be beneficial in positioning your product above the pack in quality.</p>",
+            "image_2_alt": ""
+          }
+        },
+        "tab_E649rw": {
+          "type": "tab",
+          "settings": {
+            "label": "POUCHES/STRIP PACKING",
+            "image_alt": "",
+            "heading": "POUCHES/STRIP PACKING",
+            "text": "<p>Manufacturing - Pouches/Strip Packing</p><p>Flexible packaging such as foil-laminate pouches, heat sealed laminates, and strip packaging are a cost-effective solution for packaging powders, solids, and packaging medical devices.</p><p>Hi-Tech Pharmaceuticals has the technical experience combined with the best technology and materials available to make your product compliant and effective. Our complete pouch package services include four-side seal packaging and manual pouch sealing operations.</p><p><strong>We can handle virtually any product:</strong></p><ul><li>Tablet/Capsule/Gelcap/Liquicap/Powder Fill/Medical Devices</li><li>Powder pouching expertise</li><li>Microdosing powders</li><li>Powder-filled pouches</li><li>Liquid pouching</li><li>Solid unit dose strip packaging</li><li>3-panel gussets; 4-panel gusset pouches</li><li>Sachet packaging</li><li>Stand-up pouches</li><li>Die-cut pouches to match other packaging forms (jars, bottles) for consistent branding</li><li>Foil-laminates:Barrier pouches with gusseted bottom and heat-sealable bottom or zipper closureChevron peel pouchCorner peel pouchSquare sealed pouch</li><li>Pouching, Pouch Sealing and Packaging Solutions equipment.</li><li>Processing Capabilities:Vertical Form, Fill & Seal: Tablets and CapsulesHorizontal Form, Fill and Seal: Wound care products, Medical Devices, Consumer Products</li></ul>",
+            "image_2_alt": ""
+          }
+        },
+        "tab_QyT4aX": {
+          "type": "tab",
+          "settings": {
+            "label": "PACKAGING SERVICES",
+            "image_alt": "",
+            "heading": "BLISTER PACKING & PACKAGING SERVICES",
+            "text": "<p>Hi-Tech Pharmaceuticals offers virtually any form of thermoformed blister packaging or cold-form blister packaging for your nutraceutical packaging solutions. For convenience and flexibility, we offer scalable solutions from mini- to large-scale production, and for one-time (stability testing, promotional packaging, seasonal packaging) or your regular outsourced packaging requirements.</p><p>All Hi-Tech Pharmaceuticals blister packaging solutions for nutraceutical and OTC applications, all provided to you in our FDA cGMP environment.</p><ul><li>Thermoformed blister packaging for virtually all forms of products:Solids/Powders/Semi-solids (gels, creams and ointments)Microfill and nanofill for powders</li><li>Blister packaging for regimen and combination therapies.</li><li>Multi-product blistersHi-Tech can package up to five different tablet and or capsules in a single blister package!</li><li>Blister packaging for stability testing</li><li>Child resistant blister packaging</li><li>Thermoforming and cold forming formats</li><li>Blister packaging for compliance and regimen therapies</li><li>Blister packaging prototyping</li><li>Cold-foil blister packaging</li><li>Heat seal blister carding</li><li>Blister card tipping and affixing</li><li>Custom engineered packages and packaging equipment for specialized applications & products</li></ul><h3>PACKAGE SERVICES</h3><p>Hi-Tech Pharmaceuticals offers the convenience of in-house packaging services for finished product in Tablet, Capsule, and Powder form. We can offer faster turn around times with our new packaging facility equipped with the latest high speed automated equipment designed to provide premium quality packaging to our customers.</p><ul><li>New Packaging Facility with the Latest High Speed Automated Equipment.</li><li>Fully Compliant with Certified GMP Standards.</li><li>Tablets & Capsules: Automated Bottle Fill, Automated Cotton Inner Fill, Automated Capper, Heat Induced Foil Inner Seal, Tamper Evident Outer Safety Seal, High-Speed Automated Pressure Sensitive Label Application, Video Jet Lot Coding.</li><li>Powder Processing Lines: Dual Auger Fillers, Check-Weighers, Automatic Cappers, Heat Induction Seal, Video-Jet Lot Coding, Interchangeable Labelers for both Roll-Thru and Pressure Sensitive Labels, and Unscrambler Tables for Packing.</li><li>Strict Quality Control Standards.</li><li>On-time delivery.</li><li>Hi-Tech has the resources to offer complete all-in-one manufacturing services to meet all your final product specifications.</li></ul><h2>Main Menu</h2><ul><li><a href=\"https://hitechpharma.com/\">Home</a></li><li><a href=\"https://hitechpharma.com/collections/all-products\">All Products</a></li><li><a href=\"https://hitechpharma.com/collections/all-products\">By Category</a></li><li><a href=\"https://hitechpharma.com/collections\">By Brand</a></li><li><a href=\"https://hitechpharma.com/pages/retailers\">Find a Retailer</a></li><li><a href=\"https://hitechpharma.com/blogs/news\">News</a></li><li><a href=\"https://hitechpharma.com/pages/about-hi-tech-pharmaceuticals\">About</a></li><li><a href=\"https://hitechpharma.com/pages/athletes\">Athletes</a></li><li><a href=\"https://hitechpharma.com/pages/manufacturing\">Manufacturing</a></li><li><a href=\"https://hitechpharma.com/pages/contact-us\">Contact</a></li></ul><h2>Customer Care</h2><ul><li><a href=\"https://hitechpharma.com/pages/contact-us\">Contact Us</a></li><li><a href=\"https://hitechpharma.com/pages/shipping-returns-1\">Shipping & Returns</a></li><li><a href=\"https://hitechpharma.com/pages/accessability\">Accessibility</a></li><li><a href=\"https://hitechpharma.com/pages/privacy-security\">Privacy & Security</a></li><li><a href=\"https://hitechpharma.com/pages/terms-of-use\">Terms of Use</a></li><li><a href=\"https://hitechpharma.com/a/sitemap-tools/sitemap\">Site Map</a></li></ul><h2>Raw Materials</h2>",
+            "image_2_alt": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_mwfERb",
+        "tab_Tr4qpc",
+        "tab_mP9kCn",
+        "tab_fiBhBz",
+        "tab_UbtWME",
+        "tab_Xt7BcC",
+        "tab_kicABU",
+        "tab_E649rw",
+        "tab_QyT4aX"
+      ],
+      "name": "Tabs with content",
+      "settings": {
+        "heading": ""
+      }
+    }
+  },
+  "order": [
+    "page",
+    "dynamic_flexible_content_xLMR98",
+    "dynamic_tabs_content_6dRQgp"
+  ]
+}

@@ -1,0 +1,296 @@
+{% comment %}
+  FAQ accordion. One section-level title, plus repeatable "question" blocks
+  (title = text, answer = richtext). Smooth open/close is a CSS grid-rows
+  transition; the small inline script only toggles state and closes any
+  other open item (exclusive accordion), since that behavior needs JS.
+
+  The whole section (heading included) is hidden whenever the current
+  collection's custom.faq metafield is empty.
+{% endcomment %}
+
+{%- assign faq_list = nil -%}
+{%- if article.metafields.custom.faq.value != blank -%}
+  {%- assign faq_list = article.metafields.custom.faq.value -%}
+{%- elsif collection.metafields.custom.faq.value != blank -%}
+  {%- assign faq_list = collection.metafields.custom.faq.value -%}
+{%- elsif product.metafields.custom.faq.value != blank -%}
+  {%- assign faq_list = product.metafields.custom.faq.value -%}
+{%- elsif page.metafields.custom.faq.value != blank -%}
+  {%- assign faq_list = page.metafields.custom.faq.value -%}
+{%- endif -%}
+{%- if faq_list != blank or section.blocks.size > 0 -%}
+
+{% style %}
+  #shopify-section-{{ section.id }} .faq {
+    --faq-color-heading: {{ settings.color_headings | default: '#222222' }};
+    --faq-color-text: {{ settings.color_text | default: '#4d4d4d' }};
+    --faq-color-accent: {{ settings.color_links | default: '#195be3' }};
+    --faq-color-border: #e5e5e5;
+    --faq-space-1: 8px;
+    --faq-space-2: 16px;
+    --faq-space-3: 24px;
+    --faq-space-4: 32px;
+    --faq-space-5: 48px;
+    background: transparent;
+    padding: var(--faq-space-5) 0;
+  }
+
+  #shopify-section-{{ section.id }} .faq__container {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  #shopify-section-{{ section.id }} .faq__heading {
+    margin: 0 0 var(--faq-space-4);
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: var(--faq-color-heading);
+    text-align: center;
+  }
+
+  #shopify-section-{{ section.id }} .faq__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--faq-space-2);
+  }
+
+  #shopify-section-{{ section.id }} .faq__item {
+    border: 1px solid var(--faq-color-border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  #shopify-section-{{ section.id }} .faq__question-heading {
+    margin: 0;
+  }
+
+  #shopify-section-{{ section.id }} .faq__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--faq-space-2);
+    width: 100%;
+    min-height: 44px;
+    padding: var(--faq-space-2) var(--faq-space-3);
+    border: none;
+    margin: 0;
+    background: transparent;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+    font-family: inherit;
+    text-align: left;
+    color: var(--faq-color-heading);
+    cursor: pointer;
+  }
+
+  #shopify-section-{{ section.id }} .faq__summary:focus-visible {
+    outline: 2px solid var(--faq-color-accent);
+    outline-offset: -2px;
+  }
+
+  #shopify-section-{{ section.id }} .faq__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+  }
+
+  #shopify-section-{{ section.id }} .faq__icon::before,
+  #shopify-section-{{ section.id }} .faq__icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: var(--faq-color-accent);
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease;
+  }
+
+  #shopify-section-{{ section.id }} .faq__icon::before {
+    width: 14px;
+    height: 2px;
+  }
+
+  #shopify-section-{{ section.id }} .faq__icon::after {
+    width: 2px;
+    height: 14px;
+  }
+
+  #shopify-section-{{ section.id }} .faq__summary[aria-expanded="true"] .faq__icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+  }
+
+  #shopify-section-{{ section.id }} .faq__answer-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+  }
+
+  #shopify-section-{{ section.id }} .faq__answer-wrapper.is-open {
+    grid-template-rows: 1fr;
+  }
+
+  #shopify-section-{{ section.id }} .faq__answer-inner {
+    overflow: hidden;
+  }
+
+  #shopify-section-{{ section.id }} .faq__answer {
+    padding: 0 var(--faq-space-3) var(--faq-space-3);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--faq-color-text);
+  }
+
+  #shopify-section-{{ section.id }} .faq__answer > *:first-child {
+    margin-top: 0;
+  }
+
+  #shopify-section-{{ section.id }} .faq__answer > *:last-child {
+    margin-bottom: 0;
+  }
+
+  #shopify-section-{{ section.id }} .faq__answer a {
+    color: var(--faq-color-accent);
+  }
+
+  @media (min-width: 768px) {
+    #shopify-section-{{ section.id }} .faq__heading {
+      font-size: 32px;
+    }
+
+    #shopify-section-{{ section.id }} .faq__summary,
+    #shopify-section-{{ section.id }} .faq__answer {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #shopify-section-{{ section.id }} .faq__container {
+      max-width: 800px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #shopify-section-{{ section.id }} * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+{% endstyle %}
+
+<section class="faq" {{ section.shopify_attributes }}>
+  <div class="faq__container">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="faq__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="faq__list" id="Faq-{{ section.id }}">
+        {%- for block in section.blocks -%}
+          <div class="faq__item" {{ block.shopify_attributes }}>
+            <h3 class="faq__question-heading">
+              <button
+                type="button"
+                class="faq__summary"
+                aria-expanded="false"
+                aria-controls="FaqAnswer-{{ section.id }}-{{ forloop.index }}"
+              >
+                <span class="faq__question">{{ block.settings.title }}</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq__answer-wrapper" id="FaqAnswer-{{ section.id }}-{{ forloop.index }}">
+              <div class="faq__answer-inner">
+                <div class="faq__answer rte">
+                  {{ block.settings.text }}
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+
+      <script>
+        (() => {
+          const list = document.getElementById('Faq-{{ section.id }}');
+          if (!list) return;
+
+          list.addEventListener('click', (event) => {
+            const button = event.target.closest('.faq__summary');
+            if (!button || !list.contains(button)) return;
+
+            const isOpen = button.getAttribute('aria-expanded') === 'true';
+            const wrapper = document.getElementById(button.getAttribute('aria-controls'));
+
+            list.querySelectorAll('.faq__summary[aria-expanded="true"]').forEach((openButton) => {
+              if (openButton === button) return;
+              openButton.setAttribute('aria-expanded', 'false');
+              const openWrapper = document.getElementById(openButton.getAttribute('aria-controls'));
+              if (openWrapper) openWrapper.classList.remove('is-open');
+            });
+
+            button.setAttribute('aria-expanded', String(!isOpen));
+            if (wrapper) wrapper.classList.toggle('is-open', !isOpen);
+          });
+        })();
+      </script>
+    {%- endif -%}
+  </div>
+</section>
+
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "FAQ",
+  "class": "faq--section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Frequently asked questions"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Question",
+          "default": "Question goes here"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Answer",
+          "default": "<p>Answer goes here.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "blocks": [
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
